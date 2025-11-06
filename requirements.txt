@@ -1,0 +1,16 @@
+openai
+anthropic
+google-generativeai
+ollama
+aiohttp
+tenacity
+python-dotenv
+pydantic
+pydantic-settings
+diskcache
+pytest
+pytest-asyncio
+pytest-cov
+black
+flake8
+mypy
