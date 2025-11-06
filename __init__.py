@@ -45,7 +45,7 @@ NODE_CLASS_MAPPINGS = {
 
 # (선택사항) ComfyUI UI에 표시할 노드의 친화적인 이름
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "KoreanPromptEngineer": "Korean Prompt Engineer",
+    "KoreanPromptEngineer": KoreanPromptEngineer.display_name,
 }
 
 __version__ = "0.1.0"
