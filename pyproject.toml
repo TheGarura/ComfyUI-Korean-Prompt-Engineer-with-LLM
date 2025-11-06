@@ -1,7 +1,7 @@
 [project]
 name = "ComfyUI-Korean-Prompt-Engineer-with-LLM"
 description = "이 노드는 여러분이 한국어로 상상하는 모든 것을 멋진 이미지로 만들어 줄 수 있도록 도와주는 도구입니다. 코딩이나 복잡한 설정 없이도, 마치 전문가처럼 상세하고 멋진 영어 프롬프트를 자동으로 만들어줍니다."
-version = "0.1.0"
+version = "0.1.1"
 license = {file = "LICENSE"} 
 # classifiers = [
 #     # For OS-independent nodes (works on all operating systems)
