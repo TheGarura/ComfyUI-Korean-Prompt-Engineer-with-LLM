@@ -39,6 +39,17 @@ def build_image_prompt_instruction(korean_prompt: str, options: dict) -> str:
     )
     return guidance
 
+def build_negative_prompt_instruction(negative_prompt: str) -> str:
+    guidance = (
+        "Please translate the following negative prompt into English for a generative AI model. "
+        "Do NOT include commentary, recommendations, questions, or conversational elements. "
+        "Your output MUST be a single English negative prompt sentence for direct use in image generation: "
+        "compact, descriptive, and professionally optimized. NO explanation — ONLY the prompt.\n"
+        f"Negative prompt to translate: {negative_prompt}\n"
+        "Output only the complete English prompt. Do NOT generate anything else."
+    )
+    return guidance
+
 class KoreanPromptEngineer:
     display_name = "Korean Prompt Engineer 🇰🇷"
     description = "한국어 프롬프트를 멀티 LLM으로 확장"
@@ -66,6 +77,7 @@ class KoreanPromptEngineer:
                 "max_tokens": ("INT", {"default": 1000, "min": 100, "max": 2000, "step": 100, "label": "최대 토큰 수"}),
                 "provider_name": (AVAILABLE_PROVIDERS, {"default": "openai", "label": "LLM 프로바이더"}),
                 "custom_instructions": ("STRING", {"multiline": True, "default": "", "label": "사용자 정의 지침 (영문)"}),
+                "user_negative_prompt": ("STRING", {"multiline": True, "default": "", "label": "사용자 정의 부정 프롬프트 (한국어 또는 영어)"}),
             }
         }
 
@@ -75,7 +87,8 @@ class KoreanPromptEngineer:
         lighting_setup="스튜디오 조명", mood_atmosphere="극적인",
         color_grade="생생한", composition="삼분할 구도",
         quality_settings="고품질", negative_prompt_style="표준",
-        temperature=0.7, max_tokens=1000, provider_name="openai", custom_instructions=""
+        temperature=0.7, max_tokens=1000, provider_name="openai", custom_instructions="",
+        user_negative_prompt: str = ""
     ) -> Tuple[str, str]:
         try:
             logger.info("KoreanPromptEngineer execute started")
@@ -129,8 +142,21 @@ class KoreanPromptEngineer:
                                                                  composition=composition,
                                                                  quality_settings=quality_settings,
                                                                  custom_instructions=custom_instructions)
-            negative_text = engineer.generate_negative_prompt(negative_prompt_style)
-            logger.info(f"생성된 부정 프롬프트: {negative_text}")
+            
+            if user_negative_prompt:
+                logger.info(f"사용자 정의 부정 프롬프트 감지: {user_negative_prompt}")
+                if validate_korean_prompt(user_negative_prompt, raise_exception=False): # 한국어인지 확인
+                    logger.info("사용자 정의 부정 프롬프트가 한국어입니다. LLM을 통해 번역합니다.")
+                    negative_instruction = build_negative_prompt_instruction(user_negative_prompt)
+                    negative_text = await llm.call(provider_name, negative_instruction, temperature, max_tokens)
+                else:
+                    logger.info("사용자 정의 부정 프롬프트가 영어 또는 기타 언어입니다. 그대로 사용합니다.")
+                    negative_text = user_negative_prompt
+            else:
+                negative_text = engineer.generate_negative_prompt(negative_prompt_style)
+                logger.info(f"자동 생성된 부정 프롬프트: {negative_text}")
+            
+            logger.info(f"최종 부정 프롬프트: {negative_text}")
             return (positive_text, negative_text)
 
         except ValidationError as e:

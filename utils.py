@@ -4,15 +4,26 @@ from typing import List, Set
 from .exceptions import ValidationError
 import re
 
-def validate_korean_prompt(prompt: str, max_length: int = 10000) -> bool:
+def validate_korean_prompt(prompt: str, max_length: int = 10000, raise_exception: bool = True) -> bool:
     if not prompt or len(prompt.strip()) == 0:
-        raise ValidationError("프롬프트는 비어있을 수 없습니다")
+        if raise_exception:
+            raise ValidationError("프롬프트는 비어있을 수 없습니다")
+        return False
     try:
         prompt.encode('utf-8')
     except UnicodeEncodeError:
-        raise ValidationError("프롬프트는 UTF-8 인코딩 가능해야 합니다")
+        if raise_exception:
+            raise ValidationError("프롬프트는 UTF-8 인코딩 가능해야 합니다")
+        return False
+    # 한국어 문자 포함 여부 확인 (간단한 한글 유니코드 범위 체크)
+    if not re.search(r'[\u1100-\u11FF\u3130-\u318F\uAC00-\uD7AF]', prompt):
+        if raise_exception:
+            raise ValidationError("프롬프트에 한국어 문자가 포함되어 있지 않습니다.")
+        return False
     if len(prompt) > max_length:
-        raise ValidationError(f"프롬프트 길이는 {max_length}자 이하여야 합니다")
+        if raise_exception:
+            raise ValidationError(f"프롬프트 길이는 {max_length}자 이하여야 합니다")
+        return False
     return True
 
 def sanitize_text(text: str) -> str:
