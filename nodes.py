@@ -43,7 +43,7 @@ class KoreanPromptEngineer:
     display_name = "Korean Prompt Engineer 🇰🇷"
     description = "한국어 프롬프트를 멀티 LLM으로 확장"
     RETURN_TYPES = ("STRING", "STRING")
-    RETURN_NAMES = ("positive_text", "negative_text")
+    RETURN_NAMES = ("긍정 프롬프트", "부정 프롬프트")
     FUNCTION = "execute"
     CATEGORY = "conditioning/prompt"
 
@@ -130,6 +130,7 @@ class KoreanPromptEngineer:
                                                                  quality_settings=quality_settings,
                                                                  custom_instructions=custom_instructions)
             negative_text = engineer.generate_negative_prompt(negative_prompt_style)
+            logger.info(f"생성된 부정 프롬프트: {negative_text}")
             return (positive_text, negative_text)
 
         except ValidationError as e:
