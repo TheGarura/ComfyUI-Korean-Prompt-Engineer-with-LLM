@@ -25,84 +25,147 @@
 
 ## 🛠 설치 방법 (노드를 ComfyUI에 추가하기)
 
-이 노드를 여러분의 ComfyUI에서 사용하려면 몇 가지 간단한 설치 과정이 필요합니다. 코딩을 몰라도 괜찮아요! 아래 단계를 천천히 따라오시면 됩니다.
+이 노드를 여러분의 ComfyUI에서 사용하려면 두 가지 방법이 있습니다. 코딩을 몰라도 괜찮아요! 가장 쉬운 방법부터 확인해보세요.
 
-1.  **ComfyUI 설치 폴더 찾기**:
+### 📦 방법 1: ComfyUI Manager를 사용한 설치 (⭐ 가장 쉬운 방법)
 
-    - 먼저, 여러분의 컴퓨터에 ComfyUI가 어디에 설치되어 있는지 알아야 합니다. 보통 `C:\ComfyUI` (Windows) 또는 `~/ComfyUI` (macOS/Linux)와 같은 곳에 있습니다.
-    - 이 폴더 안에 `custom_nodes`라는 이름의 폴더가 있을 거예요. 이 폴더가 우리가 노드를 설치할 곳입니다.
+ComfyUI Manager는 마치 스마트폰의 '앱 스토어'처럼, ComfyUI 노드들을 쉽게 설치하고 관리할 수 있는 도구입니다. 복잡한 명령어를 입력할 필요 없이 클릭만으로 설치할 수 있습니다!
 
-2.  **터미널(명령 프롬프트) 열기**:
+#### 1단계: ComfyUI Manager 설치하기
 
-    - **Windows**: 시작 메뉴에서 `cmd` 또는 `PowerShell`을 검색하여 실행합니다.
-    - **macOS/Linux**: `터미널` 앱을 실행합니다.
-    - 터미널은 컴퓨터에 명령을 내리는 검은색(또는 흰색) 창입니다.
+먼저 ComfyUI Manager가 설치되어 있는지 확인해야 합니다.
 
-3.  **`custom_nodes` 폴더로 이동하기**:
+**ComfyUI Manager가 이미 설치되어 있는지 확인하는 방법:**
+- ComfyUI 웹 화면 오른쪽 상단을 보세요. **🔧 "Manager"** 라는 버튼이 보이면 이미 설치되어 있습니다!
+- 만약 버튼이 없다면, 아래 단계를 따라 설치해주세요.
 
-    - 터미널에 다음 명령어를 입력하고 `Enter` 키를 누르세요.
-    - **주의**: `/path/to/ComfyUI` 부분은 여러분의 실제 ComfyUI 설치 경로로 바꿔야 합니다.
+**ComfyUI Manager를 설치하지 않았다면:**
 
-    ```bash
-    cd /path/to/ComfyUI/custom_nodes
-    ```
+1. ComfyUI 설치 폴더를 엽니다. (보통 `C:\ComfyUI` 또는 `~/ComfyUI`)
+2. 그 안에 `custom_nodes` 폴더를 찾아 엽니다.
+3. `custom_nodes` 폴더 안의 빈 공간에서 **마우스 오른쪽 버튼**을 클릭합니다.
+4. **"여기서 터미널 열기"** 또는 **"PowerShell 여기서 열기"** (Windows) / **"터미널에서 폴더 열기"** (macOS)를 선택합니다.
+5. 터미널(검은색 창)이 열리면 다음 명령어를 복사해서 붙여넣고 **Enter** 키를 누르세요:
 
-    - **예시**: 만약 ComfyUI가 `C:\Users\YourName\ComfyUI`에 있다면, `cd C:\Users\YourName\ComfyUI\custom_nodes`라고 입력합니다.
+   ```bash
+   git clone https://github.com/ltdrdata/ComfyUI-Manager.git
+   ```
 
-4.  **노드 파일 다운로드 (복제)**:
+6. 설치가 완료되면 ComfyUI를 **완전히 종료했다가 다시 실행**합니다.
+7. ComfyUI가 다시 열리면 오른쪽 상단에 **🔧 "Manager"** 버튼이 보일 것입니다!
 
-    - 이제 `custom_nodes` 폴더 안에서 다음 명령어를 입력하고 `Enter` 키를 누르세요.
+#### 2단계: Manager를 통해 한국어 프롬프트 엔지니어 설치하기
 
-    ```bash
-    git clone https://github.com/TheGarura/ComfyUI-Korean-Prompt-Engineer-with-LLM.git
-    ```
+**가장 간단한 방법입니다. 정말 쉬워요!**
 
-    - 이 명령어는 인터넷에서 이 노드의 모든 파일을 여러분의 컴퓨터로 가져와 `korean_prompt_engineer`라는 새 폴더를 만듭니다.
+1. ComfyUI 웹 화면 오른쪽 상단의 **🔧 "Manager"** 버튼을 클릭합니다.
+2. 팝업 창이 열리면 **"Install via Git URL"** (Git URL로 설치)를 찾아 클릭합니다.
+   - 또는 위의 검색 아이콘(🔍)을 클릭하고 **"Korean Prompt Engineer"**를 검색할 수도 있습니다.
+3. 만약 검색으로 찾는 경우:
+   - 검색창에 **"Korean Prompt Engineer"** 또는 **"korean"**을 입력합니다.
+   - 결과에서 **"ComfyUI-Korean-Prompt-Engineer-with-LLM"**을 찾아 클릭합니다.
+   - **"Install"** (설치) 버튼을 클릭합니다.
+4. **"Git URL로 설치"** 방법을 선택했다면:
+   - 다음 주소를 복사하여 입력 창에 붙여넣습니다:
+     ```
+     https://github.com/TheGarura/ComfyUI-Korean-Prompt-Engineer-with-LLM.git
+     ```
+   - **"Install"** 버튼을 클릭합니다.
+5. 설치가 진행되고 완료 메시지가 나타나면 **"Restart"** (재시작) 버튼을 클릭합니다.
+6. 완료! 이제 노드를 사용할 수 있습니다. 🎉
 
-5.  **새로 생긴 노드 폴더로 이동**:
+#### 3단계: 한국어 프롬프트 엔지니어 업데이트하기
 
-    - 다운로드한 노드 폴더 안으로 들어가야 합니다. 다음 명령어를 입력하고 `Enter` 키를 누르세요.
+새로운 기능이나 버그 수정이 있으면 업데이트할 수 있습니다.
 
-    ```bash
-    cd korean_prompt_engineer
-    ```
+1. ComfyUI 웹 화면 오른쪽 상단의 **🔧 "Manager"** 버튼을 클릭합니다.
+2. **"Update All"** (모두 업데이트) 버튼을 클릭하면 설치된 모든 노드가 최신 버전으로 업데이트됩니다.
+3. 또는 **"Installed Custom Nodes"** (설치된 커스텀 노드)를 선택하여 **"ComfyUI-Korean-Prompt-Engineer-with-LLM"**을 찾은 후, 그 옆의 **"Update"** (업데이트) 버튼을 클릭합니다.
+4. 업데이트가 완료되면 ComfyUI를 재시작합니다.
 
-6.  **필요한 도구들 설치**:
+---
 
-    - 이 노드가 작동하려면 몇 가지 추가적인 프로그램(Python 패키지)이 필요합니다. 다음 명령어를 입력하고 `Enter` 키를 누르세요.
+### 💻 방법 2: 터미널 명령어를 사용한 수동 설치 (기술자용)
 
-    ```bash
-    pip install -r requirements.txt
-    ```
+코딩에 이미 익숙하신 분이라면 이 방법도 좋습니다.
 
-    - 이 과정은 인터넷 연결이 필요하며, 잠시 시간이 걸릴 수 있습니다. 화면에 여러 메시지가 나타나도 걱정하지 마세요.
+#### 설치 단계
 
-7.  **ComfyUI 재시작**:
-    - 모든 설치가 끝났습니다! 이제 ComfyUI 프로그램을 완전히 껐다가 다시 실행해주세요. 그래야 새로 설치된 노드를 ComfyUI가 인식하고 사용할 수 있습니다.
+1. **ComfyUI 설치 폴더 찾기**:
+   - 먼저, 여러분의 컴퓨터에 ComfyUI가 어디에 설치되어 있는지 알아야 합니다.
+   - 보통 `C:\ComfyUI` (Windows) 또는 `~/ComfyUI` (macOS/Linux)와 같은 곳에 있습니다.
+   - 이 폴더 안에 `custom_nodes`라는 이름의 폴더가 있을 거예요. 이 폴더가 우리가 노드를 설치할 곳입니다.
 
-## 🔄 업데이트 방법 (새로운 기능이나 버그 수정 시)
+2. **터미널(명령 프롬프트) 열기**:
+   - **Windows**: 시작 메뉴에서 `cmd` 또는 `PowerShell`을 검색하여 실행합니다.
+   - **macOS/Linux**: `터미널` 앱을 실행합니다.
+   - 터미널은 컴퓨터에 명령을 내리는 검은색(또는 흰색) 창입니다.
 
-이 노드에 새로운 기능이 추가되거나 버그가 수정되었을 때, 여러분의 ComfyUI에 최신 버전을 적용하는 방법입니다.
+3. **`custom_nodes` 폴더로 이동하기**:
+   - 터미널에 다음 명령어를 입력하고 `Enter` 키를 누르세요.
+   - **주의**: `/path/to/ComfyUI` 부분은 여러분의 실제 ComfyUI 설치 경로로 바꿔야 합니다.
 
-1.  **ComfyUI 종료**: 먼저 ComfyUI 프로그램을 완전히 종료해주세요.
-2.  **노드 디렉토리로 이동**: 터미널(명령 프롬프트)을 열고, 이 노드가 설치된 디렉토리로 이동합니다.
-    ```bash
-    cd /path/to/ComfyUI/custom_nodes/korean_prompt_engineer
-    ```
-    (여기서 `/path/to/ComfyUI`는 여러분의 ComfyUI가 설치된 실제 경로입니다. 예를 들어, `C:\ComfyUI`나 `~/ComfyUI`와 같을 수 있습니다.)
-3.  **최신 버전 다운로드**: 다음 명령어를 입력하여 최신 변경사항을 다운로드합니다.
-    ```bash
-    git pull
-    ```
-    이 명령어는 인터넷에서 최신 코드를 가져와 현재 설치된 노드를 업데이트해줍니다.
-4.  **ComfyUI 재시작**: 업데이트가 완료되면 ComfyUI를 다시 시작하여 변경사항을 적용합니다.
+   ```bash
+   cd /path/to/ComfyUI/custom_nodes
+   ```
+
+   - **예시**: 만약 ComfyUI가 `C:\Users\YourName\ComfyUI`에 있다면, `cd C:\Users\YourName\ComfyUI\custom_nodes`라고 입력합니다.
+
+4. **노드 파일 다운로드 (복제)**:
+   - 이제 `custom_nodes` 폴더 안에서 다음 명령어를 입력하고 `Enter` 키를 누르세요.
+
+   ```bash
+   git clone https://github.com/TheGarura/ComfyUI-Korean-Prompt-Engineer-with-LLM.git
+   ```
+
+   - 이 명령어는 인터넷에서 이 노드의 모든 파일을 여러분의 컴퓨터로 가져와 `ComfyUI-Korean-Prompt-Engineer-with-LLM`이라는 새 폴더를 만듭니다.
+
+5. **새로 생긴 노드 폴더로 이동**:
+   - 다운로드한 노드 폴더 안으로 들어가야 합니다. 다음 명령어를 입력하고 `Enter` 키를 누르세요.
+
+   ```bash
+   cd ComfyUI-Korean-Prompt-Engineer-with-LLM
+   ```
+
+6. **필요한 도구들 설치**:
+   - 이 노드가 작동하려면 몇 가지 추가적인 프로그램(Python 패키지)이 필요합니다. 다음 명령어를 입력하고 `Enter` 키를 누르세요.
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+   - 이 과정은 인터넷 연결이 필요하며, 잠시 시간이 걸릴 수 있습니다. 화면에 여러 메시지가 나타나도 걱정하지 마세요.
+
+7. **ComfyUI 재시작**:
+   - 모든 설치가 끝났습니다! 이제 ComfyUI 프로그램을 완전히 껐다가 다시 실행해주세요. 그래야 새로 설치된 노드를 ComfyUI가 인식하고 사용할 수 있습니다.
+
+#### 수동 설치의 업데이트 방법
+
+1. **ComfyUI 종료**: 먼저 ComfyUI 프로그램을 완전히 종료해주세요.
+2. **노드 디렉토리로 이동**: 터미널(명령 프롬프트)을 열고, 이 노드가 설치된 디렉토리로 이동합니다.
+
+   ```bash
+   cd /path/to/ComfyUI/custom_nodes/ComfyUI-Korean-Prompt-Engineer-with-LLM
+   ```
+
+3. **최신 버전 다운로드**: 다음 명령어를 입력하여 최신 변경사항을 다운로드합니다.
+
+   ```bash
+   git pull
+   ```
+
+   이 명령어는 인터넷에서 최신 코드를 가져와 현재 설치된 노드를 업데이트해줍니다.
+
+4. **ComfyUI 재시작**: 업데이트가 완료되면 ComfyUI를 다시 시작하여 변경사항을 적용합니다.
+
+---
 
 ## 📁 프로젝트 구조
 
 프로젝트의 주요 디렉토리 및 파일 구조는 다음과 같습니다.
 
 ```
-korean_prompt_engineer/
+ComfyUI-Korean-Prompt-Engineer-with-LLM/
 ├── __init__.py             # ComfyUI 노드 등록 및 초기화
 ├── .env.example            # 환경 변수 설정 예시 파일
 ├── .gitignore              # Git 버전 관리 제외 파일
@@ -131,79 +194,106 @@ korean_prompt_engineer/
 
 이 노드는 여러분이 입력한 한국어 프롬프트를 영어로 번역하고 확장하기 위해 인공지능 언어 모델(LLM)의 도움을 받습니다. 따라서, 여러분이 사용하고 싶은 LLM 서비스(예: OpenAI, Google Gemini 등)의 **API 키**를 설정해주어야 합니다. API 키는 해당 서비스에 접근할 수 있는 비밀번호와 같습니다.
 
-1.  **`.env` 파일 만들기**:
+### 1단계: `.env` 파일 만들기
 
-    - 이 노드 폴더(`korean_prompt_engineer`) 안에 `.env.example`이라는 파일이 있습니다. 이 파일을 복사해서 **`.env`**라는 이름으로 바꿔주세요. (파일 확장자가 없는 파일입니다.)
-    - **Windows**: 파일 탐색기에서 `.env.example`을 복사한 후, 이름을 `.env`로 변경합니다.
-    - **macOS/Linux**: 터미널에서 다음 명령어를 입력하고 `Enter` 키를 누르세요.
-      ```bash
-      cp .env.example .env
-      ```
-    - `.env` 파일은 여러분의 API 키와 같은 중요한 정보를 안전하게 보관하는 역할을 합니다.
+이 노드 폴더 안에 `.env.example`이라는 파일이 있습니다. 이 파일을 복사해서 **`.env`**라는 이름으로 바꿔주세요. (파일 확장자가 없는 파일입니다.)
 
-2.  **API 키와 모델 이름 입력하기**:
+**Windows 사용자:**
+- 파일 탐색기를 열고 노드가 설치된 폴더(`ComfyUI-Korean-Prompt-Engineer-with-LLM`)를 찾습니다.
+- `.env.example` 파일을 마우스 오른쪽 버튼으로 클릭하고 **"복사"**를 선택합니다.
+- 같은 폴더의 빈 공간에서 마우스 오른쪽 버튼을 클릭하고 **"붙여넣기"**를 선택합니다.
+- 생성된 파일 이름을 `.env.example - 복사본`에서 `.env`로 바꿉니다.
 
-    - 이제 방금 만든 `.env` 파일을 메모장(Windows)이나 텍스트 편집기(macOS) 등으로 열어주세요.
-    - 파일 안에는 다음과 같은 내용이 보일 것입니다.
+**macOS/Linux 사용자:**
+- 터미널을 열고 노드가 설치된 폴더로 이동합니다.
+- 다음 명령어를 입력하고 `Enter` 키를 누르세요:
+  ```bash
+  cp .env.example .env
+  ```
 
-      ```ini
-      # OpenAI (ChatGPT 개발사)
-      # OPENAI_API_KEY=""
-      # OPENAI_MODEL_NAME="gpt-4-turbo"
+`.env` 파일은 여러분의 API 키와 같은 중요한 정보를 안전하게 보관하는 역할을 합니다.
 
-      # Anthropic (Claude 개발사)
-      # ANTHROPIC_API_KEY=""
-      # ANTHROPIC_MODEL_NAME="claude-3-opus-20240229"
+### 2단계: API 키와 모델 이름 입력하기
 
-      # Google (Gemini 개발사)
-      # GEMINI_API_KEY=""
-      # GEMINI_MODEL_NAME="gemini-1.5-flash"
+이제 방금 만든 `.env` 파일을 메모장(Windows)이나 텍스트 편집기(macOS) 등으로 열어주세요.
 
-      # Ollama (로컬에서 AI 모델 실행)
-      # OLLAMA_BASE_URL="http://localhost:11434"
-      # OLLAMA_MODEL_NAME="llama3"
-      ```
+파일 안에는 다음과 같은 내용이 보일 것입니다.
 
-    - 여러분은 이 중에서 사용하고 싶은 LLM 서비스의 줄에 있는 `#` (주석)을 지우고, `""` 안에 여러분의 API 키와 모델 이름을 입력해야 합니다.
-    - **예시: OpenAI를 사용하고 싶다면**
-      - OpenAI 웹사이트에서 API 키를 발급받으세요. (보통 `sk-...`로 시작합니다.)
-      - `.env` 파일을 다음과 같이 수정합니다.
-        ```ini
-        OPENAI_API_KEY="여러분의_OPENAI_API_키를_여기에_붙여넣으세요"
-        OPENAI_MODEL_NAME="gpt-4-turbo" # 또는 gpt-3.5-turbo 등, 사용하고 싶은 모델 이름
-        ```
-    - **다른 LLM 서비스도 마찬가지**: Anthropic (Claude), Google (Gemini), Ollama 등 다른 서비스를 사용하고 싶다면 해당 서비스의 API 키를 발급받아 같은 방식으로 입력합니다.
-    - **중요**: 사용하지 않는 서비스는 `#`을 그대로 두거나 줄을 지워도 됩니다. 최소한 하나 이상의 서비스 API 키를 정확히 입력해야 노드가 작동합니다.
-    - **참고**: `provider_name`은 ComfyUI 노드에서 선택하는 이름(예: `openai`, `anthropic`, `gemini`, `ollama`)과 정확히 일치해야 합니다.
+```ini
+# OpenAI (ChatGPT 개발사)
+# OPENAI_API_KEY=""
+# OPENAI_MODEL_NAME="gpt-4-turbo"
 
-3.  **파일 저장**: `.env` 파일을 수정한 후 반드시 저장해주세요.
+# Anthropic (Claude 개발사)
+# ANTHROPIC_API_KEY=""
+# ANTHROPIC_MODEL_NAME="claude-3-opus-20240229"
+
+# Google (Gemini 개발사)
+# GEMINI_API_KEY=""
+# GEMINI_MODEL_NAME="gemini-1.5-flash"
+
+# Ollama (로컬에서 AI 모델 실행)
+# OLLAMA_BASE_URL="http://localhost:11434"
+# OLLAMA_MODEL_NAME="llama3"
+```
+
+여러분은 이 중에서 사용하고 싶은 LLM 서비스의 줄에 있는 `#` (주석)을 지우고, `""` 안에 여러분의 API 키와 모델 이름을 입력해야 합니다.
+
+**예시: OpenAI를 사용하고 싶다면**
+- OpenAI 웹사이트(https://platform.openai.com)에 가입하고 API 키를 발급받으세요. (보통 `sk-...`로 시작합니다.)
+- `.env` 파일을 다음과 같이 수정합니다:
+  ```ini
+  OPENAI_API_KEY="sk-여러분의_OPENAI_API_키를_여기에_붙여넣으세요"
+  OPENAI_MODEL_NAME="gpt-4-turbo" # 또는 gpt-3.5-turbo 등, 사용하고 싶은 모델 이름
+  ```
+
+**다른 LLM 서비스도 마찬가지입니다:**
+- Anthropic (Claude): https://console.anthropic.com
+- Google (Gemini): https://makersuite.google.com/app/apikey
+- Ollama: 로컬에 설치한 후 사용 (별도의 API 키 불필요)
+
+**중요한 주의사항:**
+- 사용하지 않는 서비스는 `#`을 그대로 두거나 줄을 지워도 됩니다.
+- 최소한 하나 이상의 서비스 API 키를 정확히 입력해야 노드가 작동합니다.
+- API 키는 절대 공개하지 마세요! 깃허브에 올리거나 다른 사람에게 보여주면 안 됩니다.
+
+### 3단계: 파일 저장
+
+`.env` 파일을 수정한 후 반드시 저장해주세요!
 
 ## 🚀 ComfyUI에서 노드 사용하기 (워크플로우에 추가하고 설정하기)
 
 이제 ComfyUI에서 이 노드를 실제로 사용하는 방법을 알아볼까요? 아주 쉽습니다!
 
-1.  **노드 추가하기**:
+### 1단계: 노드 추가하기
 
-    - ComfyUI 작업 화면의 빈 공간에서 마우스 오른쪽 버튼을 클릭하세요.
-    - 메뉴가 나타나면 `Add Node` (노드 추가)를 선택합니다.
-    - 그다음 `conditioning/prompt` (컨디셔닝/프롬프트)를 선택하고, 마지막으로 `Korean Prompt Engineer 🇰🇷`를 클릭하여 노드를 추가합니다.
-    - (화면에 새로운 노드 상자가 나타날 거예요!)
+- ComfyUI 작업 화면의 빈 공간에서 마우스 오른쪽 버튼을 클릭하세요.
+- 메뉴가 나타나면 `Add Node` (노드 추가)를 선택합니다.
+- 그다음 `conditioning` → `prompt`를 선택하고, 마지막으로 `Korean Prompt Engineer 🇰🇷`를 클릭하여 노드를 추가합니다.
+- (화면에 새로운 노드 상자가 나타날 거예요!)
 
-2.  **입력값 설정하기 (노드에 정보 주기)**:
+### 2단계: 입력값 설정하기 (노드에 정보 주기)
 
-    - 추가된 `Korean Prompt Engineer 🇰🇷` 노드를 보면 여러 가지 설정할 수 있는 부분이 있습니다.
-    - **`한국어 프롬프트`**: 여기에 여러분이 만들고 싶은 이미지에 대한 아이디어를 한국어로 자유롭게 적어주세요. 예를 들어, `미래 도시의 밤거리를 걷는 사이버펑크 고양이`처럼요.
-    - **`LLM 프로바이더`**: 드롭다운 메뉴를 클릭하여 `.env` 파일에 설정했던 AI 언어 모델(예: `openai`, `anthropic`, `gemini`, `ollama`) 중 하나를 선택합니다.
-    - **각종 옵션 (카메라 앵글, 조명 설정 등)**: 원하는 이미지의 스타일과 분위기에 맞춰 드롭다운 메뉴에서 다양한 사진/영상 기법을 선택하세요. 어떤 옵션을 선택하느냐에 따라 이미지가 크게 달라질 수 있습니다!
-    - **`사용자 정의 지침 (영문)`**: 만약 프롬프트에 꼭 포함하고 싶은 특별한 지시사항이 있다면, 여기에 영어로 작성합니다. 예를 들어, `in the style of Blade Runner 2049` (블레이드 러너 2049 스타일로)와 같이요.
-    *   **`사용자 정의 부정 프롬프트 (한국어 또는 영어)`**: 이미지에서 피하고 싶은 요소들을 직접 입력할 수 있습니다. 한국어로 입력하면 LLM이 영어로 번역해주고, 영어로 입력하면 그대로 사용됩니다. 이 필드를 비워두면 `네거티브 프롬프트 스타일`에 따라 자동으로 부정 프롬프트가 생성됩니다.
+추가된 `Korean Prompt Engineer 🇰🇷` 노드를 보면 여러 가지 설정할 수 있는 부분이 있습니다.
 
-3.  **출력 연결하기 (다른 노드와 연결)**:
-    - 이 노드는 두 가지 중요한 결과(`positive_text`와 `negative_text`)를 만들어냅니다. 이 결과들을 다른 노드에 연결해야 이미지를 생성할 수 있습니다.
-    - **`positive_text`**: 이 노드의 `positive_text` 출력 부분을 마우스로 드래그하여, 보통 `CLIP Text Encode` 노드의 `text` 입력 부분에 연결합니다. (이것이 여러분이 원하는 이미지를 만드는 데 사용될 긍정적인 프롬프트입니다.)
-    - **`negative_text`**: 이 노드의 `negative_text` 출력 부분도 마찬가지로 다른 `CLIP Text Encode` 노드의 `text` 입력 부분에 연결합니다. (이것은 이미지에서 피하고 싶은 요소들을 알려주는 부정적인 프롬프트입니다.)
+**주요 입력 항목들:**
 
-### 🎨 노드 파라미터 상세 설명 (각 설정의 의미)
+- **`한국어 프롬프트`**: 여기에 여러분이 만들고 싶은 이미지에 대한 아이디어를 한국어로 자유롭게 적어주세요. 예: `미래 도시의 밤거리를 걷는 사이버펑크 고양이`
+- **`LLM 프로바이더`**: 드롭다운 메뉴를 클릭하여 `.env` 파일에 설정했던 AI 언어 모델(예: `openai`, `anthropic`, `gemini`, `ollama`) 중 하나를 선택합니다.
+- **각종 옵션 (카메라 앵글, 조명 설정 등)**: 원하는 이미지의 스타일과 분위기에 맞춰 드롭다운 메뉴에서 다양한 사진/영상 기법을 선택하세요. 어떤 옵션을 선택하느냐에 따라 이미지가 크게 달라질 수 있습니다!
+- **`사용자 정의 지침 (영문)`**: 만약 프롬프트에 꼭 포함하고 싶은 특별한 지시사항이 있다면, 여기에 영어로 작성합니다. 예: `in the style of Blade Runner 2049`
+- **`사용자 정의 부정 프롬프트 (한국어 또는 영어)`**: 이미지에서 피하고 싶은 요소들을 직접 입력할 수 있습니다. 한국어로 입력하면 LLM이 영어로 번역해주고, 영어로 입력하면 그대로 사용됩니다. 이 필드를 비워두면 `네거티브 프롬프트 스타일`에 따라 자동으로 부정 프롬프트가 생성됩니다.
+
+### 3단계: 출력 연결하기 (다른 노드와 연결)
+
+이 노드는 두 가지 중요한 결과(`positive_text`와 `negative_text`)를 만들어냅니다. 이 결과들을 다른 노드에 연결해야 이미지를 생성할 수 있습니다.
+
+- **`positive_text`**: 이 노드의 `positive_text` 출력 부분을 마우스로 드래그하여, 보통 `CLIP Text Encode` 노드의 `text` 입력 부분에 연결합니다. (이것이 여러분이 원하는 이미지를 만드는 데 사용될 긍정적인 프롬프트입니다.)
+- **`negative_text`**: 이 노드의 `negative_text` 출력 부분도 마찬가지로 다른 `CLIP Text Encode` 노드의 `text` 입력 부분에 연결합니다. (이것은 이미지에서 피하고 싶은 요소들을 알려주는 부정적인 프롬프트입니다.)
+
+---
+
+## 🎨 노드 파라미터 상세 설명 (각 설정의 의미)
 
 | 파라미터명                 | 설명 (무엇을 설정하는 건가요?)                                                                           | 선택 옵션 (예시)                                                                                                                                                                                                                                                                              |
 | -------------------------- | -------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -222,20 +312,22 @@ korean_prompt_engineer/
 | `사용자 정의 지침 (영문)`  | 여러분이 LLM에게 주고 싶은 특별한 추가 지시사항을 영어로 작성합니다.                                     | (자유롭게 입력)                                                                                                                                                                                                                                                                               |
 | `사용자 정의 부정 프롬프트 (한국어 또는 영어)` | 이미지에서 피하고 싶은 요소들을 직접 입력할 수 있습니다. 한국어로 입력하면 LLM이 영어로 번역해주고, 영어로 입력하면 그대로 사용됩니다. 이 필드를 비워두면 `네거티브 프롬프트 스타일`에 따라 자동으로 부정 프롬프트가 생성됩니다. | (자유롭게 입력)                                                                                                                                                                                                                                                                               |
 
+---
+
 ## ❓ 문의하기 (궁금한 점이 있다면)
 
 노드를 사용하시다가 궁금한 점이나 문제가 발생하면 언제든지 개발자에게 문의해주세요! 여러분의 피드백은 이 노드를 더 좋게 만드는 데 큰 도움이 됩니다.
 
--   **개발자 이메일**: `thegarura21@gmail.com`
+- **개발자 이메일**: `thegarura21@gmail.com`
 
-**문의하실 때 다음 정보를 함께 알려주시면 더 빠르게 도와드릴 수 있습니다.**
+**문의하실 때 다음 정보를 함께 알려주시면 더 빠르게 도와드릴 수 있습니다:**
 
--   **사용 중인 ComfyUI 버전**: (예: ComfyUI 2024-01-01 버전)
--   **운영체제**: (예: Windows 10, macOS Sonoma, Ubuntu 22.04)
--   **문제 발생 시점**: (예: 노드 설치 중, `.env` 파일 설정 후, 노드 실행 시)
--   **발생한 오류 메시지**: (터미널이나 ComfyUI 화면에 나타난 오류 메시지를 그대로 복사해서 붙여넣어 주세요. 스크린샷도 좋습니다!)
--   **시도해본 해결 방법**: (문제를 해결하기 위해 어떤 시도를 해보셨는지 알려주세요.)
--   **기타 관련 정보**: (문제를 재현할 수 있는 워크플로우 파일, 사용 중인 LLM 프로바이더 등)
+- **사용 중인 ComfyUI 버전**: (예: ComfyUI 2024-01-01 버전)
+- **운영체제**: (예: Windows 10, macOS Sonoma, Ubuntu 22.04)
+- **문제 발생 시점**: (예: 노드 설치 중, `.env` 파일 설정 후, 노드 실행 시)
+- **발생한 오류 메시지**: (터미널이나 ComfyUI 화면에 나타난 오류 메시지를 그대로 복사해서 붙여넣어 주세요. 스크린샷도 좋습니다!)
+- **시도해본 해결 방법**: (문제를 해결하기 위해 어떤 시도를 해보셨는지 알려주세요.)
+- **기타 관련 정보**: (문제를 재현할 수 있는 워크플로우 파일, 사용 중인 LLM 프로바이더 등)
 
 ## 📜 라이선스
 
@@ -245,46 +337,174 @@ korean_prompt_engineer/
 
 # English Version
 
-## Korean Prompt Engineer for ComfyUI
+## 🌟 ComfyUI Korean Prompt Engineer (Korean Prompt Engineer with LLM)
 
-This is a Korean-based professional image prompt generation node for ComfyUI. It combines simple Korean descriptions with professional photography/videography options to automatically generate detailed English prompts optimized for image generation AIs like Stable Diffusion.
+Welcome! Here's a special node for those using ComfyUI. This node is a **tool that helps you create beautiful images with whatever you can imagine in Korean**. Without coding or complex settings, you can automatically create detailed and impressive English prompts like a professional.
+
+**Who is this for?**
+
+- Those new to ComfyUI or struggling with prompt writing
+- Those who want to comfortably input ideas in Korean
+- Those who want to easily apply professional photography/video techniques to prompts
+- Those seeking optimized prompts for various AI models like Stable Diffusion
+
+This node will help you unleash your creativity to the fullest!
 
 ![Version](https://img.shields.io/badge/version-0.1.0-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Developer](https://img.shields.io/badge/developer-GARURA-orange)
 
-## 📦 Key Features
+## 🚀 Key Features
 
--   **Korean Natural Language Input**: Simply input your ideas in Korean, and they will be automatically translated and expanded into professional English prompts.
--   **Diverse LLM Support**: Choose from various LLM providers like OpenAI, Anthropic (Claude), Google (Gemini), and Ollama to generate prompts.
--   **Expert-Level Options**: Select detailed photography/videography techniques from menus, such as camera angles, lenses, lighting, and color grading, to reflect them in your prompts.
--   **Automatic Negative Prompts**: Automatically generates negative prompts by style to prevent image quality degradation factors.
--   **Custom Instructions**: Add your specific styles or requirements to `custom_instructions` to control prompt generation.
+- **Easy Korean Input**: Freely input your image ideas in Korean. This node automatically translates and expands them into professional English prompts.
+- **Diverse LLM Support**: Choose from various AI language models like OpenAI (GPT), Anthropic (Claude), Google (Gemini), and Ollama to generate prompts. It's like choosing one of several intelligent assistants!
+- **Expert-Level Options**: Easily select professional photography and videography techniques from menus, such as camera angles, lenses, lighting, and color grading. You can create impressive effects without knowing complex terminology.
+- **Automatic Negative Prompt Generation**: Automatically creates negative prompts that filter out elements that might degrade image quality (e.g., blurriness, broken images). You focus on creating great images!
+- **Custom Style Addition**: Add your special instructions or desired styles in English to `custom_instructions` to control prompt generation.
 
-## 🛠 Installation
+## 🛠 Installation Methods
 
-1.  **Clone the Repository**: Navigate to your ComfyUI's `custom_nodes` directory and clone the project:
+There are two ways to install this node. You don't need to know coding! Check the easiest method first.
 
-    ```bash
-    cd /path/to/ComfyUI/custom_nodes
-    git clone https://github.com/TheGarura/ComfyUI-Korean-Prompt-Engineer-with-LLM.git
-    ```
+### 📦 Method 1: Using ComfyUI Manager (⭐ Easiest Method)
 
-2.  **Install Dependencies**: Change into the newly created directory and install the required Python packages:
+ComfyUI Manager works like an 'App Store' for your smartphone, allowing you to easily install and manage ComfyUI nodes. You can install just by clicking, without entering complex commands!
 
-    ```bash
-    cd korean_prompt_engineer
-    pip install -r requirements.txt
-    ```
+#### Step 1: Install ComfyUI Manager
 
-3.  **Restart ComfyUI**: Fully shut down and restart ComfyUI for the node to load correctly.
+First, check if ComfyUI Manager is already installed.
+
+**To check if ComfyUI Manager is already installed:**
+- Look at the top right of the ComfyUI web screen. If you see a **🔧 "Manager"** button, it's already installed!
+- If you don't see the button, follow the steps below to install it.
+
+**If you haven't installed ComfyUI Manager yet:**
+
+1. Open your ComfyUI installation folder. (Usually `C:\ComfyUI` or `~/ComfyUI`)
+2. Find and open the `custom_nodes` folder inside.
+3. Right-click in an empty space within the `custom_nodes` folder.
+4. Select **"Open Terminal Here"** or **"Open PowerShell Here"** (Windows) / **"Open Terminal Folder"** (macOS).
+5. When the terminal (black window) opens, copy and paste this command and press **Enter**:
+
+   ```bash
+   git clone https://github.com/ltdrdata/ComfyUI-Manager.git
+   ```
+
+6. After installation completes, **completely close and restart ComfyUI**.
+7. When ComfyUI reopens, you'll see the **🔧 "Manager"** button in the top right corner!
+
+#### Step 2: Install Korean Prompt Engineer via Manager
+
+**This is the simplest method. Really easy!**
+
+1. Click the **🔧 "Manager"** button in the top right corner of the ComfyUI web screen.
+2. When the popup opens, find and click **"Install via Git URL"**.
+   - Or click the search icon (🔍) and search for **"Korean Prompt Engineer"**.
+3. If searching:
+   - Type **"Korean Prompt Engineer"** or **"korean"** in the search box.
+   - Find **"ComfyUI-Korean-Prompt-Engineer-with-LLM"** in the results and click it.
+   - Click the **"Install"** button.
+4. If you selected **"Install via Git URL"**:
+   - Copy and paste this address into the input field:
+     ```
+     https://github.com/TheGarura/ComfyUI-Korean-Prompt-Engineer-with-LLM.git
+     ```
+   - Click the **"Install"** button.
+5. Installation will proceed, and when the completion message appears, click the **"Restart"** button.
+6. Done! You can now use the node. 🎉
+
+#### Step 3: Update Korean Prompt Engineer
+
+When new features or bug fixes are available, you can update the node.
+
+1. Click the **🔧 "Manager"** button in the top right corner of the ComfyUI web screen.
+2. Click the **"Update All"** button to update all installed nodes to the latest version.
+3. Or select **"Installed Custom Nodes"**, find **"ComfyUI-Korean-Prompt-Engineer-with-LLM"**, and click the **"Update"** button next to it.
+4. After the update completes, restart ComfyUI.
+
+---
+
+### 💻 Method 2: Manual Installation Using Terminal Commands (For Technical Users)
+
+If you're already familiar with coding, this method works well too.
+
+#### Installation Steps
+
+1. **Find ComfyUI Installation Folder**:
+   - First, locate where ComfyUI is installed on your computer.
+   - Usually at `C:\ComfyUI` (Windows) or `~/ComfyUI` (macOS/Linux).
+   - Inside this folder, you'll find a `custom_nodes` folder. This is where we'll install the node.
+
+2. **Open Terminal (Command Prompt)**:
+   - **Windows**: Search for `cmd` or `PowerShell` in the Start menu and run it.
+   - **macOS/Linux**: Open the `Terminal` app.
+   - Terminal is the black (or white) window where you give commands to your computer.
+
+3. **Navigate to `custom_nodes` Folder**:
+   - Type this command in the terminal and press **Enter**.
+   - **Note**: Replace `/path/to/ComfyUI` with your actual ComfyUI installation path.
+
+   ```bash
+   cd /path/to/ComfyUI/custom_nodes
+   ```
+
+   - **Example**: If ComfyUI is at `C:\Users\YourName\ComfyUI`, type `cd C:\Users\YourName\ComfyUI\custom_nodes`.
+
+4. **Download Node Files (Clone)**:
+   - Type this command in the `custom_nodes` folder and press **Enter**.
+
+   ```bash
+   git clone https://github.com/TheGarura/ComfyUI-Korean-Prompt-Engineer-with-LLM.git
+   ```
+
+   - This command downloads all node files from the internet to your computer and creates a new folder named `ComfyUI-Korean-Prompt-Engineer-with-LLM`.
+
+5. **Navigate to the New Node Folder**:
+   - Enter the downloaded node folder. Type this command and press **Enter**:
+
+   ```bash
+   cd ComfyUI-Korean-Prompt-Engineer-with-LLM
+   ```
+
+6. **Install Required Tools**:
+   - This node needs some additional programs (Python packages). Type this command and press **Enter**:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+   - This process requires an internet connection and may take a moment. Don't worry if multiple messages appear on screen.
+
+7. **Restart ComfyUI**:
+   - Installation is complete! Now completely close and restart the ComfyUI program. This allows ComfyUI to recognize and use the newly installed node.
+
+#### Update Method for Manual Installation
+
+1. **Close ComfyUI**: First, completely close the ComfyUI program.
+2. **Navigate to Node Directory**: Open terminal and navigate to where this node is installed.
+
+   ```bash
+   cd /path/to/ComfyUI/custom_nodes/ComfyUI-Korean-Prompt-Engineer-with-LLM
+   ```
+
+3. **Download Latest Version**: Type this command to download the latest changes.
+
+   ```bash
+   git pull
+   ```
+
+   This command fetches the latest code from the internet and updates your installed node.
+
+4. **Restart ComfyUI**: After the update completes, restart ComfyUI to apply changes.
+
+---
 
 ## 📁 Project Structure
 
 The main directory and file structure of the project is as follows:
 
 ```
-korean_prompt_engineer/
+ComfyUI-Korean-Prompt-Engineer-with-LLM/
 ├── __init__.py             # ComfyUI node registration and initialization
 ├── .env.example            # Example environment variable settings file
 ├── .gitignore              # Git version control exclusion file
@@ -306,831 +526,148 @@ korean_prompt_engineer/
     ├── claude_provider.py  # Anthropic Claude provider implementation
     ├── gemini_provider.py  # Google Gemini provider implementation
     ├── ollama_provider.py  # Ollama provider implementation
-    └── openai_provider.py  # OpenAI 프로바이더 구현
+    └── openai_provider.py  # OpenAI provider implementation
 ```
 
-## ⚙️ Initial Setup: API Key and LLM Provider Integration
+## ⚙️ Initial Setup: Connecting AI Language Model (LLM) - API Key Configuration
 
-To use this node, you need at least one LLM service API key.
+This node uses AI language models (LLMs) to translate and expand your Korean input into English. Therefore, you need to configure the **API key** for the LLM service you want to use (e.g., OpenAI, Google Gemini). An API key is like a password to access that service.
 
-1.  **Create `.env` file**: Copy the `.env.example` file in the project root directory to create a `.env` file.
+### Step 1: Create `.env` File
 
-    ```bash
-    cp .env.example .env
-    ```
+In this node's folder, there's a file called `.env.example`. Copy this file and rename the copy to **`.env`**. (A file with no extension.)
 
-2.  **Enter API Keys and Model Names**: Open the created `.env` file and enter the API keys and model names for the LLM services you wish to use. Services you are not using can be left blank or commented out.
+**For Windows users:**
+- Open File Explorer and find the folder where the node is installed (`ComfyUI-Korean-Prompt-Engineer-with-LLM`).
+- Right-click the `.env.example` file and select **"Copy"**.
+- Right-click in an empty space in the same folder and select **"Paste"**.
+- Rename the created file from `.env.example - Copy` to `.env`.
 
-    **Supported LLM Providers and Configuration Examples:**
+**For macOS/Linux users:**
+- Open Terminal and navigate to the node's installation folder.
+- Type this command and press **Enter**:
+  ```bash
+  cp .env.example .env
+  ```
 
-    - **OpenAI**:
-      ```ini
-      OPENAI_API_KEY="sk-..."
-      OPENAI_MODEL_NAME="gpt-4-turbo" # or gpt-3.5-turbo, etc.
-      ```
-    - **Anthropic (Claude)**:
-      ```ini
-      ANTHROPIC_API_KEY="sk-ant-..."
-      ANTHROPIC_MODEL_NAME="claude-3-opus-20240229" # or claude-3-sonnet-20240229, etc.
-      ```
-    - **Google (Gemini)**:
-      ```ini
-      GEMINI_API_KEY="AIza..."
-      GEMINI_MODEL_NAME="gemini-1.5-flash" # or gemini-1.5-pro, etc.
-      ```
-    - **Ollama**:
-      ```ini
-      OLLAMA_BASE_URL="http://localhost:11434" # Ollama server URL
-      OLLAMA_MODEL_NAME="llama3" # Model name installed locally
-      ```
-    - **Note**: The `provider_name` must match the name selected in the ComfyUI node. (e.g., `openai`, `anthropic`, `gemini`, `ollama`)
+The `.env` file safely stores important information like your API keys.
 
-## 🚀 How to Use in ComfyUI
+### Step 2: Enter API Keys and Model Names
 
-1.  **Add Node**: In the ComfyUI workflow, right-click and select `Add Node` > `conditioning/prompt` > `Korean Prompt Engineer 🇰🇷` to add the node.
+Open the `.env` file you just created with Notepad (Windows) or a text editor (macOS).
 
-2.  **Set Input Values**:
+You'll see content like this:
 
-    - **`korean_prompt`**: Freely write your image idea in Korean. (e.g., `사이버펑크 고양이가 미래 도시의 밤거리를 걷는 모습`)
-    - **`provider_name`**: Select the LLM service to use for prompt generation. (e.g., `openai`, `anthropic`, `gemini`, `ollama`). This name must match the service configured in your `.env` file.
-    - **Various Options (Camera, Lighting, etc.)**: Select various photography/videography techniques from the dropdown menus to match your desired style and atmosphere.
-    - **`custom_instructions`**: Write any special instructions you want to include in the prompt in English. (e.g., `in the style of Blade Runner 2049`)
-    *   **`사용자 정의 부정 프롬프트 (한국어 또는 영어)`**: 이미지에서 피하고 싶은 요소들을 직접 입력할 수 있습니다. 한국어로 입력하면 LLM이 영어로 번역해주고, 영어로 입력하면 그대로 사용됩니다. 이 필드를 비워두면 `네거티브 프롬프트 스타일`에 따라 자동으로 부정 프롬프트가 생성됩니다.
+```ini
+# OpenAI (ChatGPT developer)
+# OPENAI_API_KEY=""
+# OPENAI_MODEL_NAME="gpt-4-turbo"
 
-3.  **Connect Outputs**:
-    - **`positive_text`**: Connect the generated positive prompt to the `text` input of a `CLIP Text Encode` node.
-    - **`negative_text`**: Connect the generated negative prompt to the `text` input of a separate `CLIP Text Encode` node.
+# Anthropic (Claude developer)
+# ANTHROPIC_API_KEY=""
+# ANTHROPIC_MODEL_NAME="claude-3-opus-20240229"
 
-### 🎨 Node Parameter Details
+# Google (Gemini developer)
+# GEMINI_API_KEY=""
+# GEMINI_MODEL_NAME="gemini-1.5-flash"
 
-| Parameter Name          | Description                                    | Selection Options (Example)                                                                                                                                                                           |
-| ----------------------- | ---------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `korean_prompt`         | Korean text containing the image idea          | (Free input)                                                                                                                                                                                          |
-| `provider_name`         | Name of the LLM service to use                 | `openai`, `anthropic`, `gemini`, `ollama` (dropdown selection)                                                                                                                                        |
-| `Camera Angle`          | Camera shooting angle                          | `front` (정면), `3/4_angle` (3/4 각도), `profile` (측면), `overhead` (오버헤드), `low_angle` (로우 앵글), `dutch_angle` (더치 앵글)                                                                   |
-| `Camera Lens`           | Type of camera lens                            | `24mm` (초광각), `35mm` (광각), `50mm` (표준), `85mm` (망원), `135mm` (장망원), `macro` (접사)                                                                                                        |
-| `Lighting Setup`        | Lighting style                                 | `studio` (스튜디오 조명), `cinematic` (시네마틱 조명), `natural` (자연광), `golden_hour` (골든 아워), `backlit` (역광), `rim_lighting` (림 라이팅), `chiaroscuro` (키아로스쿠로), `neon` (네온 조명)  |
-| `Mood/Atmosphere`       | Overall mood                                   | `dramatic` (극적인), `moody` (음울한), `bright_cheerful` (밝고 쾌활한), `melancholic` (멜랑콜리한), `mysterious` (신비로운), `romantic` (낭만적인), `dystopian` (bleak, futuristic pessimism), `ethereal` (영묘한) |
-| `Color Grade`           | Color grading style                            | `vibrant` (생생한), `desaturated` (채도 낮은), `warm_tones` (따뜻한 톤), `cool_tones` (차가운 톤), `monochrome` (흑백), `duotone` (듀오톤), `cinematic_color` (시네마틱 색감)                         |
-| `Composition`           | Composition technique                          | `centered` (중앙 구도), `rule_of_thirds` (삼분할 구도), `leading_lines` (리딩 라인), `depth_layers` (깊이 레이어), `symmetrical` (대칭 구도), `diagonal` (대각선 구도)                                |
-| `Quality Settings`      | Image quality related keywords                 | `ultra_detailed` (초고화질), `high_quality` (고품질), `professional` (전문적인), `cinematic_quality` (필름 미학)                                                                                      |
-| `Negative Prompt Style` | Intensity/style of negative prompt             | `standard` (저품질, 아티팩트 제거), `strict` (자연스러운 외관 강조), `minimal` (주요 결함에만 집중)                                                                                                   |
-| `temperature`           | LLM creativity (higher for more diversity)     | 0.0 ~ 2.0                                                                                                                                                                                             |
-| `max_tokens`            | Maximum length of the generated prompt         | 100 ~ 2000                                                                                                                                                                                            |
-| `custom_instructions`   | User-defined additional instructions (English) | (Free input)                                                                                                                                                                                          |
-| `사용자 정의 부정 프롬프트 (한국어 또는 영어)` | 이미지에서 피하고 싶은 요소들을 직접 입력할 수 있습니다. 한국어로 입력하면 LLM이 영어로 번역해주고, 영어로 입력하면 그대로 사용됩니다. 이 필드를 비워두면 `네거티브 프롬프트 스타일`에 따라 자동으로 부정 프롬프트가 생성됩니다. | (자유롭게 입력)                                                                                                                                                                                                                                                                               |
+# Ollama (Run AI models locally)
+# OLLAMA_BASE_URL="http://localhost:11434"
+# OLLAMA_MODEL_NAME="llama3"
+```
 
-## ❓ 문의하기 (궁금한 점이 있다면)
+Choose the LLM service you want to use, remove the `#` (comment) from those lines, and enter your API key and model name inside the `""`.
 
-노드를 사용하시다가 궁금한 점이나 문제가 발생하면 언제든지 개발자에게 문의해주세요! 여러분의 피드백은 이 노드를 더 좋게 만드는 데 큰 도움이 됩니다.
+**Example: If you want to use OpenAI**
+- Visit OpenAI's website (https://platform.openai.com), sign up, and generate an API key. (Usually starts with `sk-...`)
+- Modify your `.env` file like this:
+  ```ini
+  OPENAI_API_KEY="sk-paste_your_OPENAI_API_key_here"
+  OPENAI_MODEL_NAME="gpt-4-turbo" # or gpt-3.5-turbo, etc.
+  ```
 
--   **개발자 이메일**: `thegarura21@gmail.com`
+**Same for other LLM services:**
+- Anthropic (Claude): https://console.anthropic.com
+- Google (Gemini): https://makersuite.google.com/app/apikey
+- Ollama: Install locally and use (no separate API key needed)
 
-**문의하실 때 다음 정보를 함께 알려주시면 더 빠르게 도와드릴 수 있습니다.**
+**Important Notes:**
+- Services you don't use can be left with `#` or deleted.
+- You must correctly enter at least one service's API key for the node to work.
+- Never share your API key! Don't post it on GitHub or show it to others.
 
--   **사용 중인 ComfyUI 버전**: (예: ComfyUI 2024-01-01 버전)
--   **운영체제**: (예: Windows 10, macOS Sonoma, Ubuntu 22.04)
--   **문제 발생 시점**: (예: 노드 설치 중, `.env` 파일 설정 후, 노드 실행 시)
--   **발생한 오류 메시지**: (터미널이나 ComfyUI 화면에 나타난 오류 메시지를 그대로 복사해서 붙여넣어 주세요. 스크린샷도 좋습니다!)
--   **시도해본 해결 방법**: (문제를 해결하기 위해 어떤 시도를 해보셨는지 알려주세요.)
--   **기타 관련 정보**: (문제를 재현할 수 있는 워크플로우 파일, 사용 중인 LLM 프로바이더 등)
+### Step 3: Save the File
 
-## 📜 라이선스
+Make sure to save the `.env` file after editing!
 
-이 프로젝트는 [MIT 라이선스](LICENSE)에 따라 배포됩니다.
+## 🚀 Using the Node in ComfyUI
+
+Now let's learn how to actually use this node in ComfyUI! It's very simple!
+
+### Step 1: Add Node
+
+- Right-click on an empty space in the ComfyUI work area.
+- Select `Add Node` from the menu that appears.
+- Select `conditioning` → `prompt`, then click `Korean Prompt Engineer 🇰🇷` to add the node.
+- (A new node box will appear on screen!)
+
+### Step 2: Set Input Values
+
+The added `Korean Prompt Engineer 🇰🇷` node has various settings.
+
+**Main Input Items:**
+
+- **`korean_prompt`**: Freely write your desired image idea in Korean here. Example: `A cyberpunk cat walking through a night city street`
+- **`provider_name`**: Click the dropdown menu and select the AI language model you configured in the `.env` file (e.g., `openai`, `anthropic`, `gemini`, `ollama`).
+- **Various Options (Camera Angle, Lighting, etc.)**: Select various photography/videography techniques from dropdown menus to match your desired style and atmosphere. Your choices significantly affect the resulting image!
+- **`custom_instructions`**: If you have special instructions you want included in the prompt, write them here in English. Example: `in the style of Blade Runner 2049`
+- **`custom_negative_prompt`**: You can directly input elements you want to avoid in the image. If you input in Korean, the LLM will translate it to English; if in English, it uses as-is. If left empty, negative prompts are automatically generated based on the `negative_prompt_style`.
+
+### Step 3: Connect Outputs
+
+This node produces two important results (`positive_text` and `negative_text`). You must connect these to other nodes to generate images.
+
+- **`positive_text`**: Drag the `positive_text` output from this node to the `text` input of a `CLIP Text Encode` node. (This is the positive prompt that creates your desired image.)
+- **`negative_text`**: Similarly, connect the `negative_text` output to another `CLIP Text Encode` node's `text` input. (This is the negative prompt that tells the AI what to avoid.)
 
 ---
 
-# English Version
+## 🎨 Node Parameter Details
 
-## Korean Prompt Engineer for ComfyUI
-
-This is a Korean-based professional image prompt generation node for ComfyUI. It combines simple Korean descriptions with professional photography/videography options to automatically generate detailed English prompts optimized for image generation AIs like Stable Diffusion.
-
-![Version](https://img.shields.io/badge/version-0.1.0-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
-![Developer](https://img.shields.io/badge/developer-GARURA-orange)
-
-## 📦 Key Features
-
--   **Korean Natural Language Input**: Simply input your ideas in Korean, and they will be automatically translated and expanded into professional English prompts.
--   **Diverse LLM Support**: Choose from various LLM providers like OpenAI, Anthropic (Claude), Google (Gemini), and Ollama to generate prompts.
--   **Expert-Level Options**: Select detailed photography/videography techniques from menus, such as camera angles, lenses, lighting, and color grading, to reflect them in your prompts.
--   **Automatic Negative Prompts**: Automatically generates negative prompts by style to prevent image quality degradation factors.
--   **Custom Instructions**: Add your specific styles or requirements to `custom_instructions` to control prompt generation.
-
-## 🛠 Installation
-
-1.  **Clone the Repository**: Navigate to your ComfyUI's `custom_nodes` directory and clone the project:
-
-    ```bash
-    cd /path/to/ComfyUI/custom_nodes
-    git clone https://github.com/TheGarura/ComfyUI-Korean-Prompt-Engineer-with-LLM.git
-    ```
-
-2.  **Install Dependencies**: Change into the newly created directory and install the required Python packages:
-
-    ```bash
-    cd korean_prompt_engineer
-    pip install -r requirements.txt
-    ```
-
-3.  **Restart ComfyUI**: Fully shut down and restart ComfyUI for the node to load correctly.
-
-## 📁 Project Structure
-
-The main directory and file structure of the project is as follows:
-
-```
-korean_prompt_engineer/
-├── __init__.py             # ComfyUI node registration and initialization
-├── .env.example            # Example environment variable settings file
-├── .gitignore              # Git version control exclusion file
-├── cache_manager.py        # Cache management logic
-├── exceptions.py           # Custom exception handling
-├── LICENSE                 # MIT License information
-├── llm_manager.py          # LLM provider management and calls
-├── logger.py               # Logging configuration
-├── nodes.py                # ComfyUI custom node definitions
-├── presets.py              # Preset data used for prompt generation
-├── prompt_engineer.py      # Core prompt generation logic
-├── README.md               # Project description (this file)
-├── requirements.txt        # Python dependency list
-├── templates.py            # Prompt template definitions
-├── utils.py                # Collection of utility functions
-└── llm_providers/          # LLM provider modules
-    ├── __init__.py         # Provider package initialization
-    ├── base.py             # Base provider interface
-    ├── claude_provider.py  # Anthropic Claude provider implementation
-    ├── gemini_provider.py  # Google Gemini provider implementation
-    ├── ollama_provider.py  # Ollama provider implementation
-    └── openai_provider.py  # OpenAI 프로바이더 구현
-```
-
-## ⚙️ Initial Setup: API Key and LLM Provider Integration
-
-To use this node, you need at least one LLM service API key.
-
-1.  **Create `.env` file**: Copy the `.env.example` file in the project root directory to create a `.env` file.
-
-    ```bash
-    cp .env.example .env
-    ```
-
-2.  **Enter API Keys and Model Names**: Open the created `.env` file and enter the API keys and model names for the LLM services you wish to use. Services you are not using can be left blank or commented out.
-
-    **Supported LLM Providers and Configuration Examples:**
-
-    -   **OpenAI**:
-        ```ini
-        OPENAI_API_KEY="sk-..."
-        OPENAI_MODEL_NAME="gpt-4-turbo" # or gpt-3.5-turbo, etc.
-        ```
-    -   **Anthropic (Claude)**:
-        ```ini
-        ANTHROPIC_API_KEY="sk-ant-..."
-        ANTHROPIC_MODEL_NAME="claude-3-opus-20240229" # or claude-3-sonnet-20240229, etc.
-        ```
-    -   **Google (Gemini)**:
-        ```ini
-        GEMINI_API_KEY="AIza..."
-        GEMINI_MODEL_NAME="gemini-1.5-flash" # or gemini-1.5-pro, etc.
-        ```
-    -   **Ollama**:
-        ```ini
-        OLLAMA_BASE_URL="http://localhost:11434" # Ollama server URL
-        OLLAMA_MODEL_NAME="llama3" # Model name installed locally
-        ```
-    -   **Note**: The `provider_name` must match the name selected in the ComfyUI node. (e.g., `openai`, `anthropic`, `gemini`, `ollama`)
-
-## 🚀 How to Use in ComfyUI
-
-1.  **Add Node**: In the ComfyUI workflow, right-click and select `Add Node` > `conditioning/prompt` > `Korean Prompt Engineer 🇰🇷` to add the node.
-
-2.  **Set Input Values**:
-
-    -   **`korean_prompt`**: Freely write your image idea in Korean. (e.g., `사이버펑크 고양이가 미래 도시의 밤거리를 걷는 모습`)
-    -   **`provider_name`**: Select the LLM service to use for prompt generation. (e.g., `openai`, `anthropic`, `gemini`, `ollama`). This name must match the service configured in your `.env` file.
-    -   **Various Options (Camera, Lighting, etc.)**: Select various photography/videography techniques from the dropdown menus to match your desired style and atmosphere.
-    -   **`custom_instructions`**: Write any special instructions you want to include in the prompt in English. (e.g., `in the style of Blade Runner 2049`)
-    *   **`사용자 정의 부정 프롬프트 (한국어 또는 영어)`**: 이미지에서 피하고 싶은 요소들을 직접 입력할 수 있습니다. 한국어로 입력하면 LLM이 영어로 번역해주고, 영어로 입력하면 그대로 사용됩니다. 이 필드를 비워두면 `네거티브 프롬프트 스타일`에 따라 자동으로 부정 프롬프트가 생성됩니다.
-
-3.  **Connect Outputs**:
-    -   **`positive_text`**: Connect the generated positive prompt to the `text` input of a `CLIP Text Encode` node.
-    -   **`negative_text`**: Connect the generated negative prompt to the `text` input of a separate `CLIP Text Encode` node.
-
-### 🎨 Node Parameter Details
-
-| Parameter Name          | Description                                    | Selection Options (Example)                                                                                                                                                                           |
-| ----------------------- | ---------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `korean_prompt`         | Korean text containing the image idea          | (Free input)                                                                                                                                                                                          |
-| `provider_name`         | Name of the LLM service to use                 | `openai`, `anthropic`, `gemini`, `ollama` (dropdown selection)                                                                                                                                        |
-| `Camera Angle`          | Camera shooting angle                          | `front` (정면), `3/4_angle` (3/4 각도), `profile` (측면), `overhead` (오버헤드), `low_angle` (로우 앵글), `dutch_angle` (더치 앵글)                                                                   |
-| `Camera Lens`           | Type of camera lens                            | `24mm` (초광각), `35mm` (광각), `50mm` (표준), `85mm` (망원), `135mm` (장망원), `macro` (접사)                                                                                                        |
-| `Lighting Setup`        | Lighting style                                 | `studio` (스튜디오 조명), `cinematic` (시네마틱 조명), `natural` (자연광), `golden_hour` (골든 아워), `backlit` (역광), `rim_lighting` (림 라이팅), `chiaroscuro` (키아로스쿠로), `neon` (네온 조명)  |
-| `Mood/Atmosphere`       | Overall mood                                   | `dramatic` (극적인), `moody` (음울한), `bright_cheerful` (밝고 쾌활한), `melancholic` (멜랑콜리한), `mysterious` (신비로운), `romantic` (낭만적인), `dystopian` (bleak, futuristic pessimism), `ethereal` (영묘한) |
-| `Color Grade`           | Color grading style                            | `vibrant` (생생한), `desaturated` (채도 낮은), `warm_tones` (따뜻한 톤), `cool_tones` (차가운 톤), `monochrome` (흑백), `duotone` (듀오톤), `cinematic_color` (시네마틱 색감)                         |
-| `Composition`           | Composition technique                          | `centered` (중앙 구도), `rule_of_thirds` (삼분할 구도), `leading_lines` (리딩 라인), `depth_layers` (깊이 레이어), `symmetrical` (대칭 구도), `diagonal` (대각선 구도)                                |
-| `Quality Settings`      | Image quality related keywords                 | `ultra_detailed` (초고화질), `high_quality` (고품질), `professional` (전문적인), `cinematic_quality` (필름 미학)                                                                                      |
-| `Negative Prompt Style` | Intensity/style of negative prompt             | `standard` (저품질, 아티팩트 제거), `strict` (자연스러운 외관 강조), `minimal` (주요 결함에만 집중)                                                                                                   |
-| `temperature`           | LLM creativity (higher for more diversity)     | 0.0 ~ 2.0                                                                                                                                                                                             |
-| `max_tokens`            | Maximum length of the generated prompt         | 100 ~ 2000                                                                                                                                                                                            |
-| `custom_instructions`   | User-defined additional instructions (English) | (Free input)                                                                                                                                                                                          |
-| `사용자 정의 부정 프롬프트 (한국어 또는 영어)` | 이미지에서 피하고 싶은 요소들을 직접 입력할 수 있습니다. 한국어로 입력하면 LLM이 영어로 번역해주고, 영어로 입력하면 그대로 사용됩니다. 이 필드를 비워두면 `네거티브 프롬프트 스타일`에 따라 자동으로 부정 프롬프트가 생성됩니다. | (자유롭게 입력)                                                                                                                                                                                                                                                                               |
-
-## ❓ 문의하기 (궁금한 점이 있다면)
-
-노드를 사용하시다가 궁금한 점이나 문제가 발생하면 언제든지 개발자에게 문의해주세요! 여러분의 피드백은 이 노드를 더 좋게 만드는 데 큰 도움이 됩니다.
-
--   **개발자 이메일**: `thegarura21@gmail.com`
-
-**문의하실 때 다음 정보를 함께 알려주시면 더 빠르게 도와드릴 수 있습니다.**
-
--   **사용 중인 ComfyUI 버전**: (예: ComfyUI 2024-01-01 버전)
--   **운영체제**: (예: Windows 10, macOS Sonoma, Ubuntu 22.04)
--   **문제 발생 시점**: (예: 노드 설치 중, `.env` 파일 설정 후, 노드 실행 시)
--   **발생한 오류 메시지**: (터미널이나 ComfyUI 화면에 나타난 오류 메시지를 그대로 복사해서 붙여넣어 주세요. 스크린샷도 좋습니다!)
--   **시도해본 해결 방법**: (문제를 해결하기 위해 어떤 시도를 해보셨는지 알려주세요.)
--   **기타 관련 정보**: (문제를 재현할 수 있는 워크플로우 파일, 사용 중인 LLM 프로바이더 등)
-
-## 📜 라이선스
-
-이 프로젝트는 [MIT 라이선스](LICENSE)에 따라 배포됩니다.
+| Parameter Name          | Description | Selection Options |
+| ----------------------- | ----------- | --------- |
+| `korean_prompt`         | Your desired image idea in Korean | (Free input) |
+| `provider_name`         | AI language model to use for prompt generation. Must match the name in your `.env` file. | `openai`, `anthropic`, `gemini`, `ollama` (dropdown) |
+| `Camera Angle`          | From which angle to shoot the image | `front`, `3/4_angle`, `profile`, `overhead`, `low_angle`, `dutch_angle` |
+| `Camera Lens`           | What type of camera lens effect | `24mm`, `35mm`, `50mm`, `85mm`, `135mm`, `macro` |
+| `Lighting Setup`        | Overall lighting atmosphere | `studio`, `cinematic`, `natural`, `golden_hour`, `backlit`, `rim_lighting`, `chiaroscuro`, `neon` |
+| `Mood/Atmosphere`       | Overall mood and feeling | `dramatic`, `moody`, `bright_cheerful`, `melancholic`, `mysterious`, `romantic`, `dystopian`, `ethereal` |
+| `Color Grade`           | Color grading style | `vibrant`, `desaturated`, `warm_tones`, `cool_tones`, `monochrome`, `duotone`, `cinematic_color` |
+| `Composition`           | Composition technique | `centered`, `rule_of_thirds`, `leading_lines`, `depth_layers`, `symmetrical`, `diagonal` |
+| `Quality Settings`      | Image quality keywords | `ultra_detailed`, `high_quality`, `professional`, `cinematic_quality` |
+| `Negative Prompt Style` | Intensity/style of negative prompt | `standard`, `strict`, `minimal` |
+| `temperature`           | LLM creativity level (higher = more diverse) | 0.0 ~ 2.0 |
+| `max_tokens`            | Maximum length of generated prompt | 100 ~ 2000 |
+| `custom_instructions`   | Your special additional instructions in English | (Free input) |
+| `custom_negative_prompt` | Elements to avoid (Korean or English). LLM translates Korean to English; English used as-is. Auto-generated if empty. | (Free input) |
 
 ---
 
-# English Version
+## ❓ Questions? (If you have any inquiries)
 
-## Korean Prompt Engineer for ComfyUI
+If you encounter any questions or issues while using the node, please contact the developer anytime! Your feedback helps make this node better.
 
-This is a Korean-based professional image prompt generation node for ComfyUI. It combines simple Korean descriptions with professional photography/videography options to automatically generate detailed English prompts optimized for image generation AIs like Stable Diffusion.
+- **Developer Email**: `thegarura21@gmail.com`
 
-![Version](https://img.shields.io/badge/version-0.1.0-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
-![Developer](https://img.shields.io/badge/developer-GARURA-orange)
+**Including the following information when contacting will help us assist you faster:**
 
-## 📦 Key Features
+- **ComfyUI Version You're Using**: (e.g., ComfyUI 2024-01-01 version)
+- **Operating System**: (e.g., Windows 10, macOS Sonoma, Ubuntu 22.04)
+- **When the Problem Occurred**: (e.g., During node installation, after `.env` configuration, during node execution)
+- **Error Message**: (Copy and paste the exact error message from terminal or ComfyUI screen. Screenshots are also helpful!)
+- **What You've Tried**: (Tell us what troubleshooting steps you've attempted)
+- **Other Relevant Info**: (Workflow files to reproduce the issue, LLM provider you're using, etc.)
 
--   **Korean Natural Language Input**: Simply input your ideas in Korean, and they will be automatically translated and expanded into professional English prompts.
--   **Diverse LLM Support**: Choose from various LLM providers like OpenAI, Anthropic (Claude), Google (Gemini), and Ollama to generate prompts.
--   **Expert-Level Options**: Select detailed photography/videography techniques from menus, such as camera angles, lenses, lighting, and color grading, to reflect them in your prompts.
--   **Automatic Negative Prompts**: Automatically generates negative prompts by style to prevent image quality degradation factors.
--   **Custom Instructions**: Add your specific styles or requirements to `custom_instructions` to control prompt generation.
+## 📜 License
 
-## 🛠 Installation
-
-1.  **Clone the Repository**: Navigate to your ComfyUI's `custom_nodes` directory and clone the project:
-
-    ```bash
-    cd /path/to/ComfyUI/custom_nodes
-    git clone https://github.com/TheGarura/ComfyUI-Korean-Prompt-Engineer-with-LLM.git
-    ```
-
-2.  **Install Dependencies**: Change into the newly created directory and install the required Python packages:
-
-    ```bash
-    cd korean_prompt_engineer
-    pip install -r requirements.txt
-    ```
-
-3.  **Restart ComfyUI**: Fully shut down and restart ComfyUI for the node to load correctly.
-
-## 📁 Project Structure
-
-The main directory and file structure of the project is as follows:
-
-```
-korean_prompt_engineer/
-├── __init__.py             # ComfyUI node registration and initialization
-├── .env.example            # Example environment variable settings file
-├── .gitignore              # Git version control exclusion file
-├── cache_manager.py        # Cache management logic
-├── exceptions.py           # Custom exception handling
-├── LICENSE                 # MIT License information
-├── llm_manager.py          # LLM provider management and calls
-├── logger.py               # Logging configuration
-├── nodes.py                # ComfyUI custom node definitions
-├── presets.py              # Preset data used for prompt generation
-├── prompt_engineer.py      # Core prompt generation logic
-├── README.md               # Project description (this file)
-├── requirements.txt        # Python dependency list
-├── templates.py            # Prompt template definitions
-├── utils.py                # Collection of utility functions
-└── llm_providers/          # LLM provider modules
-    ├── __init__.py         # Provider package initialization
-    ├── base.py             # Base provider interface
-    ├── claude_provider.py  # Anthropic Claude provider implementation
-    ├── gemini_provider.py  # Google Gemini provider implementation
-    ├── ollama_provider.py  # Ollama provider implementation
-    └── openai_provider.py  # OpenAI 프로바이더 구현
-```
-
-## ⚙️ Initial Setup: API Key and LLM Provider Integration
-
-To use this node, you need at least one LLM service API key.
-
-1.  **Create `.env` file**: Copy the `.env.example` file in the project root directory to create a `.env` file.
-
-    ```bash
-    cp .env.example .env
-    ```
-
-2.  **Enter API Keys and Model Names**: Open the created `.env` file and enter the API keys and model names for the LLM services you wish to use. Services you are not using can be left blank or commented out.
-
-    **Supported LLM Providers and Configuration Examples:**
-
-    -   **OpenAI**:
-        ```ini
-        OPENAI_API_KEY="sk-..."
-        OPENAI_MODEL_NAME="gpt-4-turbo" # or gpt-3.5-turbo, etc.
-        ```
-    -   **Anthropic (Claude)**:
-        ```ini
-        ANTHROPIC_API_KEY="sk-ant-..."
-        ANTHROPIC_MODEL_NAME="claude-3-opus-20240229" # or claude-3-sonnet-20240229, etc.
-        ```
-    -   **Google (Gemini)**:
-        ```ini
-        GEMINI_API_KEY="AIza..."
-        GEMINI_MODEL_NAME="gemini-1.5-flash" # or gemini-1.5-pro, etc.
-        ```
-    -   **Ollama**:
-        ```ini
-        OLLAMA_BASE_URL="http://localhost:11434" # Ollama server URL
-        OLLAMA_MODEL_NAME="llama3" # Model name installed locally
-        ```
-    -   **Note**: The `provider_name` must match the name selected in the ComfyUI node. (e.g., `openai`, `anthropic`, `gemini`, `ollama`)
-
-## 🚀 How to Use in ComfyUI
-
-1.  **Add Node**: In the ComfyUI workflow, right-click and select `Add Node` > `conditioning/prompt` > `Korean Prompt Engineer 🇰🇷` to add the node.
-
-2.  **Set Input Values**:
-
-    -   **`korean_prompt`**: Freely write your image idea in Korean. (e.g., `사이버펑크 고양이가 미래 도시의 밤거리를 걷는 모습`)
-    -   **`provider_name`**: Select the LLM service to use for prompt generation. (e.g., `openai`, `anthropic`, `gemini`, `ollama`). This name must match the service configured in your `.env` file.
-    -   **Various Options (Camera, Lighting, etc.)**: Select various photography/videography techniques from the dropdown menus to match your desired style and atmosphere.
-    -   **`custom_instructions`**: Write any special instructions you want to include in the prompt in English. (e.g., `in the style of Blade Runner 2049`)
-    *   **`사용자 정의 부정 프롬프트 (한국어 또는 영어)`**: 이미지에서 피하고 싶은 요소들을 직접 입력할 수 있습니다. 한국어로 입력하면 LLM이 영어로 번역해주고, 영어로 입력하면 그대로 사용됩니다. 이 필드를 비워두면 `네거티브 프롬프트 스타일`에 따라 자동으로 부정 프롬프트가 생성됩니다.
-
-3.  **Connect Outputs**:
-    -   **`positive_text`**: Connect the generated positive prompt to the `text` input of a `CLIP Text Encode` node.
-    -   **`negative_text`**: Connect the generated negative prompt to the `text` input of a separate `CLIP Text Encode` node.
-
-### 🎨 Node Parameter Details
-
-| Parameter Name          | Description                                    | Selection Options (Example)                                                                                                                                                                           |
-| ----------------------- | ---------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `korean_prompt`         | Korean text containing the image idea          | (Free input)                                                                                                                                                                                          |
-| `provider_name`         | Name of the LLM service to use                 | `openai`, `anthropic`, `gemini`, `ollama` (dropdown selection)                                                                                                                                        |
-| `Camera Angle`          | Camera shooting angle                          | `front` (정면), `3/4_angle` (3/4 각도), `profile` (측면), `overhead` (오버헤드), `low_angle` (로우 앵글), `dutch_angle` (더치 앵글)                                                                   |
-| `Camera Lens`           | Type of camera lens                            | `24mm` (초광각), `35mm` (광각), `50mm` (표준), `85mm` (망원), `135mm` (장망원), `macro` (접사)                                                                                                        |
-| `Lighting Setup`        | Lighting style                                 | `studio` (스튜디오 조명), `cinematic` (시네마틱 조명), `natural` (자연광), `golden_hour` (골든 아워), `backlit` (역광), `rim_lighting` (림 라이팅), `chiaroscuro` (키아로스쿠로), `neon` (네온 조명)  |
-| `Mood/Atmosphere`       | Overall mood                                   | `dramatic` (극적인), `moody` (음울한), `bright_cheerful` (밝고 쾌활한), `melancholic` (멜랑콜리한), `mysterious` (신비로운), `romantic` (낭만적인), `dystopian` (bleak, futuristic pessimism), `ethereal` (영묘한) |
-| `Color Grade`           | Color grading style                            | `vibrant` (생생한), `desaturated` (채도 낮은), `warm_tones` (따뜻한 톤), `cool_tones` (차가운 톤), `monochrome` (흑백), `duotone` (듀오톤), `cinematic_color` (시네마틱 색감)                         |
-| `Composition`           | Composition technique                          | `centered` (중앙 구도), `rule_of_thirds` (삼분할 구도), `leading_lines` (리딩 라인), `depth_layers` (깊이 레이어), `symmetrical` (대칭 구도), `diagonal` (대각선 구도)                                |
-| `Quality Settings`      | Image quality related keywords                 | `ultra_detailed` (초고화질), `high_quality` (고품질), `professional` (전문적인), `cinematic_quality` (필름 미학)                                                                                      |
-| `Negative Prompt Style` | Intensity/style of negative prompt             | `standard` (저품질, 아티팩트 제거), `strict` (자연스러운 외관 강조), `minimal` (주요 결함에만 집중)                                                                                                   |
-| `temperature`           | LLM creativity (higher for more diversity)     | 0.0 ~ 2.0                                                                                                                                                                                             |
-| `max_tokens`            | Maximum length of the generated prompt         | 100 ~ 2000                                                                                                                                                                                            |
-| `custom_instructions`   | User-defined additional instructions (English) | (Free input)                                                                                                                                                                                          |
-| `사용자 정의 부정 프롬프트 (한국어 또는 영어)` | 이미지에서 피하고 싶은 요소들을 직접 입력할 수 있습니다. 한국어로 입력하면 LLM이 영어로 번역해주고, 영어로 입력하면 그대로 사용됩니다. 이 필드를 비워두면 `네거티브 프롬프트 스타일`에 따라 자동으로 부정 프롬프트가 생성됩니다. | (자유롭게 입력)                                                                                                                                                                                                                                                                               |
-
-## ❓ 문의하기 (궁금한 점이 있다면)
-
-노드를 사용하시다가 궁금한 점이나 문제가 발생하면 언제든지 개발자에게 문의해주세요! 여러분의 피드백은 이 노드를 더 좋게 만드는 데 큰 도움이 됩니다.
-
--   **개발자 이메일**: `thegarura21@gmail.com`
-
-**문의하실 때 다음 정보를 함께 알려주시면 더 빠르게 도와드릴 수 있습니다.**
-
--   **사용 중인 ComfyUI 버전**: (예: ComfyUI 2024-01-01 버전)
--   **운영체제**: (예: Windows 10, macOS Sonoma, Ubuntu 22.04)
--   **문제 발생 시점**: (예: 노드 설치 중, `.env` 파일 설정 후, 노드 실행 시)
--   **발생한 오류 메시지**: (터미널이나 ComfyUI 화면에 나타난 오류 메시지를 그대로 복사해서 붙여넣어 주세요. 스크린샷도 좋습니다!)
--   **시도해본 해결 방법**: (문제를 해결하기 위해 어떤 시도를 해보셨는지 알려주세요.)
--   **기타 관련 정보**: (문제를 재현할 수 있는 워크플로우 파일, 사용 중인 LLM 프로바이더 등)
-
-## 📜 라이선스
-
-이 프로젝트는 [MIT 라이선스](LICENSE)에 따라 배포됩니다.
-
----
-
-# English Version
-
-## Korean Prompt Engineer for ComfyUI
-
-This is a Korean-based professional image prompt generation node for ComfyUI. It combines simple Korean descriptions with professional photography/videography options to automatically generate detailed English prompts optimized for image generation AIs like Stable Diffusion.
-
-![Version](https://img.shields.io/badge/version-0.1.0-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
-![Developer](https://img.shields.io/badge/developer-GARURA-orange)
-
-## 📦 Key Features
-
--   **Korean Natural Language Input**: Simply input your ideas in Korean, and they will be automatically translated and expanded into professional English prompts.
--   **Diverse LLM Support**: Choose from various LLM providers like OpenAI, Anthropic (Claude), Google (Gemini), and Ollama to generate prompts.
--   **Expert-Level Options**: Select detailed photography/videography techniques from menus, such as camera angles, lenses, lighting, and color grading, to reflect them in your prompts.
--   **Automatic Negative Prompts**: Automatically generates negative prompts by style to prevent image quality degradation factors.
--   **Custom Instructions**: Add your specific styles or requirements to `custom_instructions` to control prompt generation.
-
-## 🛠 Installation
-
-1.  **Clone the Repository**: Navigate to your ComfyUI's `custom_nodes` directory and clone the project:
-
-    ```bash
-    cd /path/to/ComfyUI/custom_nodes
-    git clone https://github.com/TheGarura/ComfyUI-Korean-Prompt-Engineer-with-LLM.git
-    ```
-
-2.  **Install Dependencies**: Change into the newly created directory and install the required Python packages:
-
-    ```bash
-    cd korean_prompt_engineer
-    pip install -r requirements.txt
-    ```
-
-3.  **Restart ComfyUI**: Fully shut down and restart ComfyUI for the node to load correctly.
-
-## 📁 Project Structure
-
-The main directory and file structure of the project is as follows:
-
-```
-korean_prompt_engineer/
-├── __init__.py             # ComfyUI node registration and initialization
-├── .env.example            # Example environment variable settings file
-├── .gitignore              # Git version control exclusion file
-├── cache_manager.py        # Cache management logic
-├── exceptions.py           # Custom exception handling
-├── LICENSE                 # MIT License information
-├── llm_manager.py          # LLM provider management and calls
-├── logger.py               # Logging configuration
-├── nodes.py                # ComfyUI custom node definitions
-├── presets.py              # Preset data used for prompt generation
-├── prompt_engineer.py      # Core prompt generation logic
-├── README.md               # Project description (this file)
-├── requirements.txt        # Python dependency list
-├── templates.py            # Prompt template definitions
-├── utils.py                # Collection of utility functions
-└── llm_providers/          # LLM provider modules
-    ├── __init__.py         # Provider package initialization
-    ├── base.py             # Base provider interface
-    ├── claude_provider.py  # Anthropic Claude provider implementation
-    ├── gemini_provider.py  # Google Gemini provider implementation
-    ├── ollama_provider.py  # Ollama provider implementation
-    └── openai_provider.py  # OpenAI 프로바이더 구현
-```
-
-## ⚙️ Initial Setup: API Key and LLM Provider Integration
-
-To use this node, you need at least one LLM service API key.
-
-1.  **Create `.env` file**: Copy the `.env.example` file in the project root directory to create a `.env` file.
-
-    ```bash
-    cp .env.example .env
-    ```
-
-2.  **Enter API Keys and Model Names**: Open the created `.env` file and enter the API keys and model names for the LLM services you wish to use. Services you are not using can be left blank or commented out.
-
-    **Supported LLM Providers and Configuration Examples:**
-
-    -   **OpenAI**:
-        ```ini
-        OPENAI_API_KEY="sk-..."
-        OPENAI_MODEL_NAME="gpt-4-turbo" # or gpt-3.5-turbo, etc.
-        ```
-    -   **Anthropic (Claude)**:
-        ```ini
-        ANTHROPIC_API_KEY="sk-ant-..."
-        ANTHROPIC_MODEL_NAME="claude-3-opus-20240229" # or claude-3-sonnet-20240229, etc.
-        ```
-    -   **Google (Gemini)**:
-        ```ini
-        GEMINI_API_KEY="AIza..."
-        GEMINI_MODEL_NAME="gemini-1.5-flash" # or gemini-1.5-pro, etc.
-        ```
-    -   **Ollama**:
-        ```ini
-        OLLAMA_BASE_URL="http://localhost:11434" # Ollama server URL
-        OLLAMA_MODEL_NAME="llama3" # Model name installed locally
-        ```
-    -   **Note**: The `provider_name` must match the name selected in the ComfyUI node. (e.g., `openai`, `anthropic`, `gemini`, `ollama`)
-
-## 🚀 How to Use in ComfyUI
-
-1.  **Add Node**: In the ComfyUI workflow, right-click and select `Add Node` > `conditioning/prompt` > `Korean Prompt Engineer 🇰🇷` to add the node.
-
-2.  **Set Input Values**:
-
-    -   **`korean_prompt`**: Freely write your image idea in Korean. (e.g., `사이버펑크 고양이가 미래 도시의 밤거리를 걷는 모습`)
-    -   **`provider_name`**: Select the LLM service to use for prompt generation. (e.g., `openai`, `anthropic`, `gemini`, `ollama`). This name must match the service configured in your `.env` file.
-    -   **Various Options (Camera, Lighting, etc.)**: Select various photography/videography techniques from the dropdown menus to match your desired style and atmosphere.
-    -   **`custom_instructions`**: Write any special instructions you want to include in the prompt in English. (e.g., `in the style of Blade Runner 2049`)
-    *   **`사용자 정의 부정 프롬프트 (한국어 또는 영어)`**: 이미지에서 피하고 싶은 요소들을 직접 입력할 수 있습니다. 한국어로 입력하면 LLM이 영어로 번역해주고, 영어로 입력하면 그대로 사용됩니다. 이 필드를 비워두면 `네거티브 프롬프트 스타일`에 따라 자동으로 부정 프롬프트가 생성됩니다.
-
-3.  **Connect Outputs**:
-    -   **`positive_text`**: Connect the generated positive prompt to the `text` input of a `CLIP Text Encode` node.
-    -   **`negative_text`**: Connect the generated negative prompt to the `text` input of a separate `CLIP Text Encode` node.
-
-### 🎨 Node Parameter Details
-
-| Parameter Name          | Description                                    | Selection Options (Example)                                                                                                                                                                           |
-| ----------------------- | ---------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `korean_prompt`         | Korean text containing the image idea          | (Free input)                                                                                                                                                                                          |
-| `provider_name`         | Name of the LLM service to use                 | `openai`, `anthropic`, `gemini`, `ollama` (dropdown selection)                                                                                                                                        |
-| `Camera Angle`          | Camera shooting angle                          | `front` (정면), `3/4_angle` (3/4 각도), `profile` (측면), `overhead` (오버헤드), `low_angle` (로우 앵글), `dutch_angle` (더치 앵글)                                                                   |
-| `Camera Lens`           | Type of camera lens                            | `24mm` (초광각), `35mm` (광각), `50mm` (표준), `85mm` (망원), `135mm` (장망원), `macro` (접사)                                                                                                        |
-| `Lighting Setup`        | Lighting style                                 | `studio` (스튜디오 조명), `cinematic` (시네마틱 조명), `natural` (자연광), `golden_hour` (골든 아워), `backlit` (역광), `rim_lighting` (림 라이팅), `chiaroscuro` (키아로스쿠로), `neon` (네온 조명)  |
-| `Mood/Atmosphere`       | Overall mood                                   | `dramatic` (극적인), `moody` (음울한), `bright_cheerful` (밝고 쾌활한), `멜랑콜리한` (sentimental, bittersweet), `신비로운` (enigmatic, unexplained), `낭만적인` (love, warm feelings), `디스토피아적인` (bleak, futuristic pessimism), `영묘한` (otherworldly, dreamlike) |
-| `Color Grade`           | Color grading style                            | `vibrant` (생생한), `desaturated` (채도 낮은), `warm_tones` (따뜻한 톤), `cool_tones` (차가운 톤), `monochrome` (흑백), `duotone` (듀오톤), `cinematic_color` (시네마틱 색감)                         |
-| `Composition`           | Composition technique                          | `centered` (중앙 구도), `rule_of_thirds` (삼분할 구도), `leading_lines` (리딩 라인), `depth_layers` (깊이 레이어), `symmetrical` (대칭 구도), `diagonal` (대각선 구도)                                |
-| `Quality Settings`      | Image quality related keywords                 | `ultra_detailed` (초고화질), `high_quality` (고품질), `professional` (전문적인), `cinematic_quality` (필름 미학)                                                                                      |
-| `Negative Prompt Style` | Intensity/style of negative prompt             | `standard` (저품질, 아티팩트 제거), `strict` (자연스러운 외관 강조), `minimal` (주요 결함에만 집중)                                                                                                   |
-| `temperature`           | LLM creativity (higher for more diversity)     | 0.0 ~ 2.0                                                                                                                                                                                             |
-| `max_tokens`            | Maximum length of the generated prompt         | 100 ~ 2000                                                                                                                                                                                            |
-| `custom_instructions`   | User-defined additional instructions (English) | (Free input)                                                                                                                                                                                          |
-| `사용자 정의 부정 프롬프트 (한국어 또는 영어)` | 이미지에서 피하고 싶은 요소들을 직접 입력할 수 있습니다. 한국어로 입력하면 LLM이 영어로 번역해주고, 영어로 입력하면 그대로 사용됩니다. 이 필드를 비워두면 `네거티브 프롬프트 스타일`에 따라 자동으로 부정 프롬프트가 생성됩니다. | (자유롭게 입력)                                                                                                                                                                                                                                                                               |
-
-## ❓ 문의하기 (궁금한 점이 있다면)
-
-노드를 사용하시다가 궁금한 점이나 문제가 발생하면 언제든지 개발자에게 문의해주세요! 여러분의 피드백은 이 노드를 더 좋게 만드는 데 큰 도움이 됩니다.
-
--   **개발자 이메일**: `thegarura21@gmail.com`
-
-**문의하실 때 다음 정보를 함께 알려주시면 더 빠르게 도와드릴 수 있습니다.**
-
--   **사용 중인 ComfyUI 버전**: (예: ComfyUI 2024-01-01 버전)
--   **운영체제**: (예: Windows 10, macOS Sonoma, Ubuntu 22.04)
--   **문제 발생 시점**: (예: 노드 설치 중, `.env` 파일 설정 후, 노드 실행 시)
--   **발생한 오류 메시지**: (터미널이나 ComfyUI 화면에 나타난 오류 메시지를 그대로 복사해서 붙여넣어 주세요. 스크린샷도 좋습니다!)
--   **시도해본 해결 방법**: (문제를 해결하기 위해 어떤 시도를 해보셨는지 알려주세요.)
--   **기타 관련 정보**: (문제를 재현할 수 있는 워크플로우 파일, 사용 중인 LLM 프로바이더 등)
-
-## 📜 라이선스
-
-이 프로젝트는 [MIT 라이선스](LICENSE)에 따라 배포됩니다.
-
----
-
-# English Version
-
-## Korean Prompt Engineer for ComfyUI
-
-This is a Korean-based professional image prompt generation node for ComfyUI. It combines simple Korean descriptions with professional photography/videography options to automatically generate detailed English prompts optimized for image generation AIs like Stable Diffusion.
-
-![Version](https://img.shields.io/badge/version-0.1.0-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
-![Developer](https://img.shields.io/badge/developer-GARURA-orange)
-
-## 📦 Key Features
-
--   **Korean Natural Language Input**: Simply input your ideas in Korean, and they will be automatically translated and expanded into professional English prompts.
--   **Diverse LLM Support**: Choose from various LLM providers like OpenAI, Anthropic (Claude), Google (Gemini), and Ollama to generate prompts.
--   **Expert-Level Options**: Select detailed photography/videography techniques from menus, such as camera angles, lenses, lighting, and color grading, to reflect them in your prompts.
--   **Automatic Negative Prompts**: Automatically generates negative prompts by style to prevent image quality degradation factors.
--   **Custom Instructions**: Add your specific styles or requirements to `custom_instructions` to control prompt generation.
-
-## 🛠 Installation
-
-1.  **Clone the Repository**: Navigate to your ComfyUI's `custom_nodes` directory and clone the project:
-
-    ```bash
-    cd /path/to/ComfyUI/custom_nodes
-    git clone https://github.com/TheGarura/ComfyUI-Korean-Prompt-Engineer-with-LLM.git
-    ```
-
-2.  **Install Dependencies**: Change into the newly created directory and install the required Python packages:
-
-    ```bash
-    cd korean_prompt_engineer
-    pip install -r requirements.txt
-    ```
-
-3.  **Restart ComfyUI**: Fully shut down and restart ComfyUI for the node to load correctly.
-
-## 📁 Project Structure
-
-The main directory and file structure of the project is as follows:
-
-```
-korean_prompt_engineer/
-├── __init__.py             # ComfyUI node registration and initialization
-├── .env.example            # Example environment variable settings file
-├── .gitignore              # Git version control exclusion file
-├── cache_manager.py        # Cache management logic
-├── exceptions.py           # Custom exception handling
-├── LICENSE                 # MIT License information
-├── llm_manager.py          # LLM provider management and calls
-├── logger.py               # Logging configuration
-├── nodes.py                # ComfyUI custom node definitions
-├── presets.py              # Preset data used for prompt generation
-├── prompt_engineer.py      # Core prompt generation logic
-├── README.md               # Project description (this file)
-├── requirements.txt        # Python dependency list
-├── templates.py            # Prompt template definitions
-├── utils.py                # Collection of utility functions
-└── llm_providers/          # LLM provider modules
-    ├── __init__.py         # Provider package initialization
-    ├── base.py             # Base provider interface
-    ├── claude_provider.py  # Anthropic Claude provider implementation
-    ├── gemini_provider.py  # Google Gemini provider implementation
-    ├── ollama_provider.py  # Ollama provider implementation
-    └── openai_provider.py  # OpenAI 프로바이더 구현
-```
-
-## ⚙️ Initial Setup: API Key and LLM Provider Integration
-
-To use this node, you need at least one LLM service API key.
-
-1.  **Create `.env` file**: Copy the `.env.example` file in the project root directory to create a `.env` file.
-
-    ```bash
-    cp .env.example .env
-    ```
-
-2.  **Enter API Keys and Model Names**: Open the created `.env` file and enter the API keys and model names for the LLM services you wish to use. Services you are not using can be left blank or commented out.
-
-    **Supported LLM Providers and Configuration Examples:**
-
-    -   **OpenAI**:
-        ```ini
-        OPENAI_API_KEY="sk-..."
-        OPENAI_MODEL_NAME="gpt-4-turbo" # or gpt-3.5-turbo, etc.
-        ```
-    -   **Anthropic (Claude)**:
-        ```ini
-        ANTHROPIC_API_KEY="sk-ant-..."
-        ANTHROPIC_MODEL_NAME="claude-3-opus-20240229" # or claude-3-sonnet-20240229, etc.
-        ```
-    -   **Google (Gemini)**:
-        ```ini
-        GEMINI_API_KEY="AIza..."
-        GEMINI_MODEL_NAME="gemini-1.5-flash" # or gemini-1.5-pro, etc.
-        ```
-    -   **Ollama**:
-        ```ini
-        OLLAMA_BASE_URL="http://localhost:11434" # Ollama server URL
-        OLLAMA_MODEL_NAME="llama3" # Model name installed locally
-        ```
-    -   **Note**: The `provider_name` must match the name selected in the ComfyUI node. (e.g., `openai`, `anthropic`, `gemini`, `ollama`)
-
-## 🚀 How to Use in ComfyUI
-
-1.  **Add Node**: In the ComfyUI workflow, right-click and select `Add Node` > `conditioning/prompt` > `Korean Prompt Engineer 🇰🇷` to add the node.
-
-2.  **Set Input Values**:
-
-    -   **`korean_prompt`**: Freely write your image idea in Korean. (e.g., `사이버펑크 고양이가 미래 도시의 밤거리를 걷는 모습`)
-    -   **`provider_name`**: Select the LLM service to use for prompt generation. (e.g., `openai`, `anthropic`, `gemini`, `ollama`). This name must match the service configured in your `.env` file.
-    -   **Various Options (Camera, Lighting, etc.)**: Select various photography/videography techniques from the dropdown menus to match your desired style and atmosphere.
-    -   **`custom_instructions`**: Write any special instructions you want to include in the prompt in English. (e.g., `in the style of Blade Runner 2049`)
-    *   **`사용자 정의 부정 프롬프트 (한국어 또는 영어)`**: 이미지에서 피하고 싶은 요소들을 직접 입력할 수 있습니다. 한국어로 입력하면 LLM이 영어로 번역해주고, 영어로 입력하면 그대로 사용됩니다. 이 필드를 비워두면 `네거티브 프롬프트 스타일`에 따라 자동으로 부정 프롬프트가 생성됩니다.
-
-3.  **Connect Outputs**:
-    -   **`positive_text`**: Connect the generated positive prompt to the `text` input of a `CLIP Text Encode` node.
-    -   **`negative_text`**: Connect the generated negative prompt to the `text` input of a separate `CLIP Text Encode` node.
-
-### 🎨 Node Parameter Details
-
-| Parameter Name          | Description                                    | Selection Options (Example)                                                                                                                                                                           |
-| ----------------------- | ---------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `korean_prompt`         | Korean text containing the image idea          | (Free input)                                                                                                                                                                                          |
-| `provider_name`         | Name of the LLM service to use                 | `openai`, `anthropic`, `gemini`, `ollama` (dropdown selection)                                                                                                                                        |
-| `Camera Angle`          | Camera shooting angle                          | `front` (정면), `3/4_angle` (3/4 각도), `profile` (측면), `overhead` (오버헤드), `low_angle` (로우 앵글), `dutch_angle` (더치 앵글)                                                                   |
-| `Camera Lens`           | Type of camera lens                            | `24mm` (초광각), `35mm` (광각), `50mm` (표준), `85mm` (망원), `135mm` (장망원), `macro` (접사)                                                                                                        |
-| `Lighting Setup`        | Lighting style                                 | `studio` (스튜디오 조명), `cinematic` (시네마틱 조명), `natural` (자연광), `golden_hour` (골든 아워), `backlit` (역광), `rim_lighting` (림 라이팅), `chiaroscuro` (키아로스쿠로), `neon` (네온 조명)  |
-| `Mood/Atmosphere`       | Overall mood                                   | `dramatic` (극적인), `moody` (음울한), `bright_cheerful` (밝고 쾌활한), `멜랑콜리한` (sentimental, bittersweet), `신비로운` (enigmatic, unexplained), `낭만적인` (love, warm feelings), `디스토피아적인` (bleak, futuristic pessimism), `영묘한` (otherworldly, dreamlike) |
-| `Color Grade`           | Color grading style                            | `vibrant` (생생한), `desaturated` (채도 낮은), `warm_tones` (따뜻한 톤), `cool_tones` (차가운 톤), `monochrome` (흑백), `duotone` (듀오톤), `cinematic_color` (시네마틱 색감)                         |
-| `Composition`           | Composition technique                          | `centered` (중앙 구도), `rule_of_thirds` (삼분할 구도), `leading_lines` (리딩 라인), `depth_layers` (깊이 레이어), `symmetrical` (대칭 구도), `diagonal` (대각선 구도)                                |
-| `Quality Settings`      | Image quality related keywords                 | `ultra_detailed` (초고화질), `high_quality` (고품질), `professional` (전문적인), `cinematic_quality` (필름 미학)                                                                                      |
-| `Negative Prompt Style` | Intensity/style of negative prompt             | `standard` (저품질, 아티팩트 제거), `strict` (자연스러운 외관 강조), `minimal` (주요 결함에만 집중)                                                                                                   |
-| `temperature`           | LLM creativity (higher for more diversity)     | 0.0 ~ 2.0                                                                                                                                                                                             |
-| `max_tokens`            | Maximum length of the generated prompt         | 100 ~ 2000                                                                                                                                                                                            |
-| `custom_instructions`   | User-defined additional instructions (English) | (Free input)                                                                                                                                                                                          |
-| `사용자 정의 부정 프롬프트 (한국어 또는 영어)` | 이미지에서 피하고 싶은 요소들을 직접 입력할 수 있습니다. 한국어로 입력하면 LLM이 영어로 번역해주고, 영어로 입력하면 그대로 사용됩니다. 이 필드를 비워두면 `네거티브 프롬프트 스타일`에 따라 자동으로 부정 프롬프트가 생성됩니다. | (자유롭게 입력)                                                                                                                                                                                                                                                                               |
-
-## ❓ 문의하기 (궁금한 점이 있다면)
-
-노드를 사용하시다가 궁금한 점이나 문제가 발생하면 언제든지 개발자에게 문의해주세요! 여러분의 피드백은 이 노드를 더 좋게 만드는 데 큰 도움이 됩니다.
-
--   **개발자 이메일**: `thegarura21@gmail.com`
-
-**문의하실 때 다음 정보를 함께 알려주시면 더 빠르게 도와드릴 수 있습니다.**
-
--   **사용 중인 ComfyUI 버전**: (예: ComfyUI 2024-01-01 버전)
--   **운영체제**: (예: Windows 10, macOS Sonoma, Ubuntu 22.04)
--   **문제 발생 시점**: (예: 노드 설치 중, `.env` 파일 설정 후, 노드 실행 시)
--   **발생한 오류 메시지**: (터미널이나 ComfyUI 화면에 나타난 오류 메시지를 그대로 복사해서 붙여넣어 주세요. 스크린샷도 좋습니다!)
--   **시도해본 해결 방법**: (문제를 해결하기 위해 어떤 시도를 해보셨는지 알려주세요.)
--   **기타 관련 정보**: (문제를 재현할 수 있는 워크플로우 파일, 사용 중인 LLM 프로바이더 등)
-
-## 📜 라이선스
-
-이 프로젝트는 [MIT 라이선스](LICENSE)에 따라 배포됩니다.
-
----
-
-# English Version
-
-## Korean Prompt Engineer for ComfyUI
-
-This is a Korean-based professional image prompt generation node for ComfyUI. It combines simple Korean descriptions with professional photography/videography options to automatically generate detailed English prompts optimized for image generation AIs like Stable Diffusion.
-
-![Version](https://img.shields.io/badge/version-0.1.0-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
-![Developer](https://img.shields.io/badge/developer-GARURA-orange)
-
-## 📦 Key Features
-
--   **Korean Natural Language Input**: Simply input your ideas in Korean, and they will be automatically translated and expanded into professional English prompts.
--   **Diverse LLM Support**: Choose from various LLM providers like OpenAI, Anthropic (Claude), Google (Gemini), and Ollama to generate prompts.
--   **Expert-Level Options**: Select detailed photography/videography techniques from menus, such as camera angles, lenses, lighting, and color grading, to reflect them in your prompts.
--   **Automatic Negative Prompts**: Automatically generates negative prompts by style to prevent image quality degradation factors.
--   **Custom Instructions**: Add your specific styles or requirements to `custom_instructions` to control prompt generation.
-
-## 🛠 Installation
-
-1.  **Clone the Repository**: Navigate to your ComfyUI's `custom_nodes` directory and clone the project:
-
-    ```bash
-    cd /path/to/ComfyUI/custom_nodes
-    git clone https://github.com/TheGarura/ComfyUI-Korean-Prompt-Engineer-with-LLM.git
-    ```
-
-2.  **Install Dependencies**: Change into the newly created directory and install the required Python packages:
-
-    ```bash
-    cd korean_prompt_engineer
-    pip install -r requirements.txt
-    ```
-
-3.  **Restart ComfyUI**: Fully shut down and restart ComfyUI for the node to load correctly.
-
-## 📁 Project Structure
-
-The main directory and file structure of the project is as follows:
-
-```
-korean_prompt_engineer/
-├── __init__.py             # ComfyUI node registration and initialization
-├── .env.example            # Example environment variable settings file
-├── .gitignore              # Git version control exclusion file
-├── cache_manager.py        # Cache management logic
-├── exceptions.py           # Custom exception handling
-├── LICENSE                 # MIT License information
-├── llm_manager.py          # LLM provider management and calls
-├── logger.py               # Logging configuration
-├── nodes.py                # ComfyUI custom node definitions
-├── presets.py              # Preset data used for prompt generation
-├── prompt_engineer.py      # Core prompt generation logic
-├── README.md               # Project description (this file)
-├── requirements.txt        # Python dependency list
-├── templates.py            # Prompt template definitions
-├── utils.py                # Collection of utility functions
-└── llm_providers/          # LLM provider modules
-    ├── __init__.py         # Provider package initialization
-    ├── base.py             # Base provider interface
-    ├── claude_provider.py  # Anthropic Claude provider implementation
-    ├── gemini_provider.py  # Google Gemini provider implementation
-    ├── ollama_provider.py  # Ollama provider implementation
-    └── openai_provider.py  # OpenAI 프로바이더 구현
-```
-
-## ⚙️ Initial Setup: API Key and LLM Provider Integration
-
-To use this node, you need at least one LLM service API key.
-
-1.  **Create `.env` file**: Copy the `.env.example` file in the project root directory to create a `.env` file.
-
-    ```bash
-    cp .env.example .env
-    ```
-
-2.  **Enter API Keys and Model Names**: Open the created `.env` file and enter the API keys and model names for the LLM services you wish to use. Services you are not using can be left blank or commented out.
-
-    **Supported LLM Providers and Configuration Examples:**
-
-    -   **OpenAI**:
-        ```ini
-        OPENAI_API_KEY="sk-..."
-        OPENAI_MODEL_NAME="gpt-4-turbo" # or gpt-3.5-turbo, etc.
-        ```
-    -   **Anthropic (Claude)**:
-        ```ini
-        ANTHROPIC_API_KEY="sk-ant-..."
-        ANTHROPIC_MODEL_NAME="claude-3-opus-20240229" # or claude-3-sonnet-20240229, etc.
-        ```
-    -   **Google (Gemini)**:
-        ```ini
-        GEMINI_API_KEY="AIza..."
-        GEMINI_MODEL_NAME="gemini-1.5-flash" # or gemini-1.5-pro, etc.
-        ```
-    -   **Ollama**:
-        ```ini
-        OLLAMA_BASE_URL="http://localhost:11434" # Ollama server URL
-        OLLAMA_MODEL_NAME="llama3" # Model name installed locally
-        ```
-    -   **Note**: The `provider_name` must match the name selected in the ComfyUI node. (e.g., `openai`, `anthropic`, `gemini`, `ollama`)
+This project is distributed under the [MIT License](LICENSE).
